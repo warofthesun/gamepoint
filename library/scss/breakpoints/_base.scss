@@ -20,7 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: lighten($tan, 5%);
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -153,7 +153,7 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
+	background-color: none;
 }
 
 	#logo {
@@ -822,6 +822,41 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
+#sidebar-home {
+
+	&:before {
+		content: "\f16d";
+		font-family: "FontAwesome";
+	    background-color: $pink;
+	    border-radius: 34px;
+	    height: 30px;
+	    width: 45px;
+	    margin: 0 auto;
+	    margin-bottom: -30px;
+	    position: relative;
+	    z-index: 99;
+	    text-align: center;
+	    line-height: 180%;
+	    font-size: 1.5em;
+		color: $tan;
+		border: 2px solid $tan;
+		text-shadow: 1px 1px 1px #333;
+		box-shadow: 1px 1px 1px #333;
+	}
+	&.sidebar {
+		margin-top: 0;
+
+		.widget {
+			margin: 0;
+		}
+
+		.sbi_photo {
+				border-bottom: 4px solid $blue;
+				margin-bottom: 2em;
+		}
+	}
+}
+
 .sidebar {}
 
 	.widgettitle {}
@@ -848,10 +883,10 @@ SIDEBARS & ASIDES
 	}
 
 	.no-widgets {
-		background-color: $white;
+		background-color: none;
 		padding: 1.5em;
 		text-align: center;
-		border: 1px solid $border-color;
+		border: 0px solid $border-color;
 		border-radius: 2px;
 		margin-bottom: 1.5em;
 	}
@@ -862,8 +897,8 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	background-color: $brown;
+	color: $blue;
 }
 
 	/*

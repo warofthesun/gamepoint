@@ -909,7 +909,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 .blue-btn, .comment-reply-link, #submit {
   display: inline-block;
   position: relative;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
   font-size: 0.9em;
@@ -935,11 +935,11 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 .blue-btn, .comment-reply-link, #submit {
-  background-color: #2980b9; }
+  background-color: #A3DED2; }
   .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
-    background-color: #2574a8; }
+    background-color: #94d9cb; }
   .blue-btn:active, .comment-reply-link:active, #submit:active {
-    background-color: #2472a4; }
+    background-color: #90d7c9; }
 
 /******************************************************************
 Site Name:
@@ -991,7 +991,7 @@ textarea,
   border: 0;
   width: 100%;
   max-width: 400px;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #eaedf2;
   -webkit-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out; }
@@ -1252,11 +1252,11 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
-  background-color: #eaedf2;
+  background-color: #fdfcf6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1310,12 +1310,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: #513628;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #322219; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1364,7 +1364,7 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #000; }
+  background-color: none; }
 
 #logo {
   margin: 0.75em 0; }
@@ -1421,7 +1421,7 @@ POSTS & CONTENT STYLES
   background-color: #fff;
   border-radius: 3px;
   margin-bottom: 1.5em;
-  border: 1px solid #ccc; }
+  border: 1px solid #513628; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
@@ -1491,7 +1491,7 @@ POSTS & CONTENT STYLES
   .entry-content blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #2980b9;
+    border-left: 3px solid #A3DED2;
     font-style: italic;
     color: #9fa6b4; }
   .entry-content dd {
@@ -1573,9 +1573,9 @@ PAGE NAVI STYLES
     padding: 0.75em;
     min-width: 1em;
     display: block;
-    color: #2980b9; }
+    color: #A3DED2; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-      background-color: #2980b9;
+      background-color: #A3DED2;
       color: #fff; }
   .pagination .current {
     cursor: default;
@@ -1725,14 +1725,40 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+#sidebar-home:before {
+  content: "\f16d";
+  font-family: "FontAwesome";
+  background-color: #F7ACB8;
+  border-radius: 34px;
+  height: 30px;
+  width: 45px;
+  margin: 0 auto;
+  margin-bottom: -30px;
+  position: relative;
+  z-index: 99;
+  text-align: center;
+  line-height: 180%;
+  font-size: 1.5em;
+  color: #F7F4E2;
+  border: 2px solid #F7F4E2;
+  text-shadow: 1px 1px 1px #333;
+  box-shadow: 1px 1px 1px #333; }
+#sidebar-home.sidebar {
+  margin-top: 0; }
+  #sidebar-home.sidebar .widget {
+    margin: 0; }
+  #sidebar-home.sidebar .sbi_photo {
+    border-bottom: 4px solid #A3DED2;
+    margin-bottom: 2em; }
+
 .widget ul li {
   /* deep nesting */ }
 
 .no-widgets {
-  background-color: #fff;
+  background-color: none;
   padding: 1.5em;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 0px solid #513628;
   border-radius: 2px;
   margin-bottom: 1.5em; }
 
@@ -1741,8 +1767,8 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #000;
-  color: #f8f9fa; }
+  background-color: #513628;
+  color: #A3DED2; }
 
 /*
 if you checked out the link above:

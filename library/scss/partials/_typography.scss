@@ -49,8 +49,9 @@ I've edited it a bit, but it's a nice starting point.
 
 
 // font stacks
-$sans-serif:        "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif:        "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Lora", "Georgia", Cambria, Times New Roman, Times, serif;
+$cursive:           "Just Another Hand", cursive;
 
 /*
  i imported this one in the functions file so bones would look sweet.
@@ -81,4 +82,3 @@ p {
        -o-font-feature-settings: "liga", "dlig";
           font-feature-settings: "liga", "dlig";
 }
-
