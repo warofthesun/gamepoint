@@ -110,6 +110,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
+
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -121,9 +122,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	}
 }
 
+.front-page {}
+
+#logo {
+	&.h1 {
+		font-size: 2.5em;
+	}
+}
+
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 2em;
 	line-height: 1.333em;
+	text-transform: uppercase;
+	color: $brown;
+	font-weight: bold;
 }
 
 h2, .h2 {
@@ -154,15 +166,40 @@ HEADER STYLES
 
 .header {
 	background-color: none;
+	background-image: url('../images/header-pattern@2x.png');
+	background-size: contain;
+    height: 150px;
+    margin-top: 5em;
 }
 
-	#logo {
-		margin: 0.75em 0;
+#logo {
+	margin: 0.75em 0;
+	margin: 0 auto;
+	width: 250px;
+	text-align: center;
+	background-color: lighten($tan, 5%);
+	margin-top: -1.2em;
+	height: 250px;
+	border-radius: 140px;
+	padding-top: 5px;
 
-		a {
-			color: $white;
-		}
+	a {
+		color: $brown;
+		font-size: 6em;
 	}
+}
+
+.header_info {
+	color: $brown;
+
+	.store_hours {
+		text-align: left;
+	}
+
+	.address {
+		text-align: right
+	}
+}
 
 /*********************
 NAVIGATION STYLES
@@ -252,7 +289,53 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
+	margin-top: 5em;
+}
+
+#inner-content {
+	border-top: 1px solid $brown;
+    padding-top: 30px;
+}
+
+.padding_remove-right {
+	padding-right: 0px;
+}
+
+.homepage_event {
+	color: $brown;
+	float: left;
+	border-bottom: 1px solid $brown;
+	margin-top:-2em;
+	padding-bottom: 3em;
+
+	.event_image {
+		img {
+			width: 100% !important;
+			height: auto;
+		}
+	}
+
+	.event_title {
+		h1, .h1 {
+			margin-top: 0em;
+			margin-bottom: 0em;
+			font-weight: 900;
+
+			a, a:visited {
+				color: $blue;
+			}
+		}
+	}
+
+	.event_date {
+		font-style: italic;
+		padding-bottom: 1em;
+		border-bottom: 1px solid $brown;
+	}
+
+	.event_content {
+		padding: 1em 0;
+	}
 }
 
 		.hentry {
@@ -734,7 +817,7 @@ COMMENT STYLES
 
 	/* comment reply link */
 	.comment-reply-link {
-		@extend .blue-btn;
+		@extend .pink-btn;
 		font-size: 0.9em;
 		float: right;
 
@@ -790,7 +873,7 @@ COMMENT FORM STYLES
 
 	/* comment submit button */
 	#submit {
-		@extend .blue-btn;
+		@extend .pink-btn;
 		float: right;
 		font-size: 1em;
 	}
@@ -840,11 +923,11 @@ SIDEBARS & ASIDES
 	    font-size: 1.5em;
 		color: $tan;
 		border: 2px solid $tan;
-		text-shadow: 1px 1px 1px #333;
-		box-shadow: 1px 1px 1px #333;
+		@include drop-shadow;
 	}
 	&.sidebar {
 		margin-top: 0;
+		border-left: 1px solid $brown;
 
 		.widget {
 			margin: 0;

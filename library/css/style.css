@@ -475,6 +475,39 @@ http://ia.net/blog/responsive-typography-the-basics/
 http://alistapart.com/column/responsive-typography-is-a-physical-discipline
 
 ******************************************************************/
+@font-face {
+  font-family: "gamepoint";
+  src: url("../fonts/gamepoint.eot");
+  src: url("../fonts/gamepoint.eot?#iefix") format("embedded-opentype"), url("../fonts/gamepoint.woff") format("woff"), url("../fonts/gamepoint.ttf") format("truetype"), url("../fonts/gamepoint.svg#gamepoint") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[data-icon]:before {
+  font-family: "gamepoint" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="gp-"]:before,
+[class*=" gp-"]:before {
+  font-family: "gamepoint" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.gp-gamepoint-logo:before {
+  content: "\61"; }
+
 /*********************
 FONT FACE (IN YOUR FACE)
 *********************/
@@ -906,27 +939,31 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, .comment-reply-link, #submit {
+.pink-btn, .comment-reply-link, #submit {
   display: inline-block;
   position: relative;
   font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  color: #fff;
-  font-size: 0.9em;
-  font-size: 34px;
+  color: #F7F4E2 !important;
+  font-size: .9em;
   line-height: 34px;
-  font-weight: normal;
+  font-weight: bold;
   padding: 0 24px;
   border-radius: 4px;
-  border: 0;
+  border: 1px solid #F7F4E2;
   cursor: pointer;
+  text-transform: uppercase;
   -webkit-transition: background-color 0.14s ease-in-out;
-  transition: background-color 0.14s ease-in-out; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+  transition: background-color 0.14s ease-in-out;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  .pink-btn:hover, .comment-reply-link:hover, #submit:hover, .pink-btn:focus, .comment-reply-link:focus, #submit:focus {
     color: #fff;
     text-decoration: none;
-    outline: none; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
+    outline: none;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important; }
+  .pink-btn:active, .comment-reply-link:active, #submit:active {
     top: 1px; }
 
 /*
@@ -934,11 +971,11 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn, .comment-reply-link, #submit {
-  background-color: #A3DED2; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
-    background-color: #94d9cb; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
+.pink-btn, .comment-reply-link, #submit {
+  background-color: #F7ACB8; }
+  .pink-btn:hover, .comment-reply-link:hover, #submit:hover, .pink-btn:focus, .comment-reply-link:focus, #submit:focus {
+    background-color: #f599a8; }
+  .pink-btn:active, .comment-reply-link:active, #submit:active {
     background-color: #90d7c9; }
 
 /******************************************************************
@@ -1338,9 +1375,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none; }
 
+#logo.h1 {
+  font-size: 2.5em; }
+
 h1, .h1 {
-  font-size: 2.5em;
-  line-height: 1.333em; }
+  font-size: 2em;
+  line-height: 1.333em;
+  text-transform: uppercase;
+  color: #513628;
+  font-weight: bold; }
 
 h2, .h2 {
   font-size: 1.75em;
@@ -1364,12 +1407,32 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: none; }
+  background-color: none;
+  background-image: url("../images/header-pattern@2x.png");
+  background-size: contain;
+  height: 150px;
+  margin-top: 5em; }
 
 #logo {
-  margin: 0.75em 0; }
+  margin: 0.75em 0;
+  margin: 0 auto;
+  width: 250px;
+  text-align: center;
+  background-color: #fdfcf6;
+  margin-top: -1.2em;
+  height: 250px;
+  border-radius: 140px;
+  padding-top: 5px; }
   #logo a {
-    color: #fff; }
+    color: #513628;
+    font-size: 6em; }
+
+.header_info {
+  color: #513628; }
+  .header_info .store_hours {
+    text-align: left; }
+  .header_info .address {
+    text-align: right; }
 
 /*********************
 NAVIGATION STYLES
@@ -1415,7 +1478,36 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 1.5em; }
+  margin-top: 5em; }
+
+#inner-content {
+  border-top: 1px solid #513628;
+  padding-top: 30px; }
+
+.padding_remove-right {
+  padding-right: 0px; }
+
+.homepage_event {
+  color: #513628;
+  float: left;
+  border-bottom: 1px solid #513628;
+  margin-top: -2em;
+  padding-bottom: 3em; }
+  .homepage_event .event_image img {
+    width: 100% !important;
+    height: auto; }
+  .homepage_event .event_title h1, .homepage_event .event_title .h1 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-weight: 900; }
+    .homepage_event .event_title h1 a, .homepage_event .event_title h1 a:visited, .homepage_event .event_title .h1 a, .homepage_event .event_title .h1 a:visited {
+      color: #A3DED2; }
+  .homepage_event .event_date {
+    font-style: italic;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #513628; }
+  .homepage_event .event_content {
+    padding: 1em 0; }
 
 .hentry {
   background-color: #fff;
@@ -1741,10 +1833,11 @@ SIDEBARS & ASIDES
   font-size: 1.5em;
   color: #F7F4E2;
   border: 2px solid #F7F4E2;
-  text-shadow: 1px 1px 1px #333;
-  box-shadow: 1px 1px 1px #333; }
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
 #sidebar-home.sidebar {
-  margin-top: 0; }
+  margin-top: 0;
+  border-left: 1px solid #513628; }
   #sidebar-home.sidebar .widget {
     margin: 0; }
   #sidebar-home.sidebar .sbi_photo {

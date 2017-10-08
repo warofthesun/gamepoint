@@ -49,7 +49,7 @@
 				<div id="inner-header" class="wrap cf">
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><i class="fa fa-bitbucket"></i><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" class="gp-gamepoint-logo"></a></p>
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
@@ -73,5 +73,18 @@
 					</nav>
 
 				</div>
-
+				<div class="wrap cf header_info">
+					<?php $my_query = new WP_Query('pagename=site-info');
+					while ($my_query->have_posts()) : $my_query->the_post();?>
+					<div class="m-all t-1of2 d-1of2 cf">
+						<div class="store_hours">
+							<?php the_field('weekday_hours'); ?>
+							<?php the_field('weekend_hours'); ?>
+						</div>
+					</div>
+					<div class="m-all t-1of2 d-1of2 last-col cf">
+						<div class="address"><?php the_field('address'); ?></div>
+					</div>
+					<?php endwhile; ?>
+				</div>
 			</header>

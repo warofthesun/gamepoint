@@ -75,6 +75,7 @@ if ( ! isset( $content_width ) ) {
 // Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'large-square', 920, 920, true );
 
 /*
 to add more sizes, simply copy a line from above
@@ -154,20 +155,21 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
-	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'bonestheme' ),
-		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
+
+    register_sidebar(array(
+		'id' => 'sidebar-home',
+		'name' => __( 'Homepage Sidebar', 'bonestheme' ),
+		'description' => __( 'The right side of the homepage.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
 
-    register_sidebar(array(
-		'id' => 'sidebar-home',
-		'name' => __( 'Homepage Sidebar', 'bonestheme' ),
-		'description' => __( 'The right side of the homepage.', 'bonestheme' ),
+	register_sidebar(array(
+		'id' => 'sidebar1',
+		'name' => __( 'Inner Sidebar', 'bonestheme' ),
+		'description' => __( 'This sidebar will be used whenever called in an interior page', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
