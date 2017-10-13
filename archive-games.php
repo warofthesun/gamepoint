@@ -11,7 +11,7 @@
  * For more info: http://codex.wordpress.org/Post_Type_Templates
 */
 ?>
-<!--archive-custom_type-->
+<!--archive-games-->
 <?php get_header(); ?>
 
 			<div id="content">

@@ -5,15 +5,6 @@
 				<div id="inner-content" class="wrap cf">
 
 						<main id="main" class="m-all t-2of3 d-5of7 padding_remove-right cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-							<article>
-							<?php $my_query = new WP_Query('pagename=welcome-to-gamepoint-cafe');
-							while ($my_query->have_posts()) : $my_query->the_post();?>
-
-								<h2><?php the_field('title'); ?></h2>
-								<?php the_content() ?>
-
-							<?php endwhile; ?>
-							</article>
 							<article class="homepage_event">
 								<?php $loop = new WP_Query(
 									array(
@@ -47,50 +38,31 @@
 												<a href="<?php the_permalink(); ?>" class="pink-btn">Learn More</a>&nbsp;&nbsp;<a href="#" class="pink-btn">See all Events</a>
 											</div>
 										</div>
-										<?php endwhile; ?>
-									</article>
 
-
-
-
+								<?php endwhile; ?>
+							</article>
+							<div style="clear:both;"></div>
+							<?php $my_query = new WP_Query('pagename=welcome-to-gamepoint-cafe');
+							while ($my_query->have_posts()) : $my_query->the_post();?>
+							<article>
+								<h2><?php the_field('title'); ?></h2>
+								<?php the_content() ?>
+							</article>
+							<?php endwhile; ?>
 							<div style="clear:both;"></div>
 							<!--START LATEST GAMES-->
 							<article class="latest_games">
 								<h2>Latest Games</h2>
 								<ul>
-								<?php $post_type = 'games';
 
-									// Get all the taxonomies for this post type
-									$taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
+									<li>
+										<?php $my_query = new WP_Query('post_type=games&post_per_page=1&category_name=classic');
+										while ($my_query->have_posts()) : $my_query->the_post();?>
+										<div class="game_category"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></div>
+										<div class="game_name"><?php the_title(); ?></div>
+										<?php endwhile; ?>
+									</li>
 
-									foreach( $taxonomies as $taxonomy ) :
-
-									    // Gets every "category" (term) in this taxonomy to get the respective posts
-									    $terms = get_terms( $taxonomy );
-
-									    foreach( $terms as $term ) :
-
-									        $args = array(
-									                'post_type' => $post_type,
-									                'posts_per_page' => 1,  //show all posts
-									                'tax_query' => array(
-									                    array(
-									                        'taxonomy' => $taxonomy,
-									                        'field' => 'slug',
-									                        'terms' => $term->slug,
-									                    )
-									                )
-
-									            );
-									        $posts = new WP_Query($args);
-
-									        if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
-											<li>
-												<div class="game_category"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></div>
-												<div class="game_name"><?php the_title(); ?></div>
-											</li>
-									        <?php endwhile; endif; ?>
-									    <?php endforeach; endforeach; ?>
 								</ul>
 							</article>
 

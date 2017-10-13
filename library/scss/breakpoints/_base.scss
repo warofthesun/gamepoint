@@ -318,6 +318,17 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 
+article {
+	border-bottom: 1px solid $tan;
+	border-right: 1px solid $tan;
+	float: left;
+	width: 100%;
+
+	&:last-child {
+		border-bottom: 0px solid;
+	}
+}
+
 #content {
 	margin-top: 5em;
 }
@@ -334,8 +345,6 @@ POSTS & CONTENT STYLES
 .homepage_event {
 	color: $brown;
 	float: left;
-	border-bottom: 1px solid $brown;
-	margin-top:-2em;
 	padding-bottom: 3em;
 
 
@@ -368,6 +377,42 @@ POSTS & CONTENT STYLES
 
 	.event_content {
 		padding: 1em 0;
+	}
+}
+
+.latest_games {
+	ul {
+		margin-top: 1em;
+		li {
+			float: left;
+			width: 47%;
+			margin-right: 1em;
+			margin-bottom: 2em;
+
+
+		}
+
+
+	}
+	.game_category {
+		color: $pink;
+		text-transform: uppercase;
+		font-family: $sans-serif;
+		font-weight: bold;
+		font-size: 1.1em;
+		text-align: center;
+	}
+
+	.game_name {
+		text-align: center;
+		font-family: $cursive;
+		text-transform: capitalize;
+		font-size: 2.5em;
+		border-top: 1px solid $tan;
+		border-bottom: 1px solid $tan;
+		background-color: $white;
+		border: 1px solid $tan;
+		padding-top: .1em;
 	}
 }
 
@@ -960,7 +1005,7 @@ SIDEBARS & ASIDES
 	}
 	&.sidebar {
 		margin-top: 0;
-		border-left: 1px solid $brown;
+		border-left: 0px solid $brown;
 
 		.widget {
 			margin: 0;
