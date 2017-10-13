@@ -142,6 +142,7 @@ h2, .h2 {
 	font-size: 1.75em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
+	text-transform: uppercase;
 }
 
 h3, .h3 {
@@ -194,10 +195,39 @@ HEADER STYLES
 
 	.store_hours {
 		text-align: left;
+		font-size: 1.1em;
+		margin-top: -1.5em;
+
+		i {
+			color: $blue;
+			text-transform: uppercase;
+			font-size: .6em;
+			font-weight: bold;
+			font-style: normal;
+		}
+
+		.days {
+			font-weight: 700;
+		}
+
+		.hours {
+			padding-left: .2em;
+			padding-right: 1em;
+		}
+
+
+
+		ul {
+			margin: 0;
+			li {
+				display: inline-block;
+			}
+		}
 	}
 
 	.address {
-		text-align: right
+		text-align: right;
+		font-weight: 500;
 	}
 }
 
@@ -308,6 +338,7 @@ POSTS & CONTENT STYLES
 	margin-top:-2em;
 	padding-bottom: 3em;
 
+
 	.event_image {
 		img {
 			width: 100% !important;
@@ -325,6 +356,8 @@ POSTS & CONTENT STYLES
 				color: $blue;
 			}
 		}
+
+
 	}
 
 	.event_date {
@@ -339,10 +372,10 @@ POSTS & CONTENT STYLES
 }
 
 		.hentry {
-			background-color: $white;
+			background-color: none;
 			border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+			border: 0px solid $border-color;
 
 			header {
 				border-bottom: 1px solid $light-gray;

@@ -78,8 +78,22 @@
 					while ($my_query->have_posts()) : $my_query->the_post();?>
 					<div class="m-all t-1of2 d-1of2 cf">
 						<div class="store_hours">
-							<?php the_field('weekday_hours'); ?>
-							<?php the_field('weekend_hours'); ?>
+							<i>Hours</i>
+							<ul>
+							<?php
+							// check if the repeater field has rows of data
+
+							if( have_rows('store_hours') ):
+							// loop through the rows of data
+								while ( have_rows('store_hours') ) : the_row();
+								// display a sub field value
+								?>
+								<li>
+									<span class="days"><?php the_sub_field('days') ?></span>
+									<span class="hours"><?php the_sub_field('hours') ?></span>
+								</li>
+							<?php endwhile; else : endif; ?>
+							</ul>
 						</div>
 					</div>
 					<div class="m-all t-1of2 d-1of2 last-col cf">

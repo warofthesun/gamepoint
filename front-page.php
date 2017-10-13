@@ -16,7 +16,7 @@
 									);  while ( $loop->have_posts() ) : $loop->the_post();  get_post_meta($post->ID, 'events', true);
 								?>
 									<article class="homepage_event">
-										<h1>Next Event</h1>
+										<h2>Next Event</h2>
 										<div class="m-all t-1of2 d-1of2 cf">
 											<a href="<?php the_permalink(); ?>" class="event_image">
 												<?php if ( has_post_thumbnail() ) the_post_thumbnail('large-square'); ?>
@@ -24,8 +24,9 @@
 										</div>
 										<div class="m-all t-1of2 d-1of2 cf">
 											<div class="event_title">
-												<h1><?php the_title('<a href="' . tribe_get_event_link() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a>'); ?></h1
-													>
+												<h1>
+													<?php the_title('<a href="' . tribe_get_event_link() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a>'); ?>
+												</h1>
 											</div >
 											<div class="event_date">
 												<?php echo tribe_get_start_date(); ?>

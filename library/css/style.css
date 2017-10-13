@@ -124,7 +124,8 @@ h1 {
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
 abbr[title] {
-  border-bottom: 1px dotted; }
+  border-bottom: 0px dotted;
+  text-decoration: none; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
@@ -939,7 +940,7 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.pink-btn, .comment-reply-link, #submit {
+.pink-btn, .comment-reply-link, #submit, #tribe-events .tribe-events-button {
   display: inline-block;
   position: relative;
   font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -957,13 +958,13 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   transition: background-color 0.14s ease-in-out;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
-  .pink-btn:hover, .comment-reply-link:hover, #submit:hover, .pink-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .pink-btn:hover, .comment-reply-link:hover, #submit:hover, #tribe-events .tribe-events-button:hover, .pink-btn:focus, .comment-reply-link:focus, #submit:focus, #tribe-events .tribe-events-button:focus {
     color: #fff;
     text-decoration: none;
     outline: none;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important; }
-  .pink-btn:active, .comment-reply-link:active, #submit:active {
+  .pink-btn:active, .comment-reply-link:active, #submit:active, #tribe-events .tribe-events-button:active {
     top: 1px; }
 
 /*
@@ -971,11 +972,11 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.pink-btn, .comment-reply-link, #submit {
+.pink-btn, .comment-reply-link, #submit, #tribe-events .tribe-events-button {
   background-color: #F7ACB8; }
-  .pink-btn:hover, .comment-reply-link:hover, #submit:hover, .pink-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .pink-btn:hover, .comment-reply-link:hover, #submit:hover, .pink-btn:focus, .comment-reply-link:focus, #submit:focus, #tribe-events .tribe-events-button:hover, #tribe-events .tribe-events-button:focus {
     background-color: #f599a8; }
-  .pink-btn:active, .comment-reply-link:active, #submit:active {
+  .pink-btn:active, .comment-reply-link:active, #submit:active, #tribe-events .tribe-events-button:active {
     background-color: #90d7c9; }
 
 /******************************************************************
@@ -1388,7 +1389,8 @@ h1, .h1 {
 h2, .h2 {
   font-size: 1.75em;
   line-height: 1.4em;
-  margin-bottom: 0.375em; }
+  margin-bottom: 0.375em;
+  text-transform: uppercase; }
 
 h3, .h3 {
   font-size: 1.125em; }
@@ -1430,9 +1432,27 @@ HEADER STYLES
 .header_info {
   color: #513628; }
   .header_info .store_hours {
-    text-align: left; }
+    text-align: left;
+    font-size: 1.1em;
+    margin-top: -1.5em; }
+    .header_info .store_hours i {
+      color: #A3DED2;
+      text-transform: uppercase;
+      font-size: .6em;
+      font-weight: bold;
+      font-style: normal; }
+    .header_info .store_hours .days {
+      font-weight: 700; }
+    .header_info .store_hours .hours {
+      padding-left: .2em;
+      padding-right: 1em; }
+    .header_info .store_hours ul {
+      margin: 0; }
+      .header_info .store_hours ul li {
+        display: inline-block; }
   .header_info .address {
-    text-align: right; }
+    text-align: right;
+    font-weight: 500; }
 
 /*********************
 NAVIGATION STYLES
@@ -1510,10 +1530,10 @@ POSTS & CONTENT STYLES
     padding: 1em 0; }
 
 .hentry {
-  background-color: #fff;
+  background-color: none;
   border-radius: 3px;
   margin-bottom: 1.5em;
-  border: 1px solid #513628; }
+  border: 0px solid #513628; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }

@@ -410,7 +410,8 @@ body#tinymce.wp-editor {
     font-size: 2em;
     margin: 0.67em 0; }
   body#tinymce.wp-editor abbr[title] {
-    border-bottom: 1px dotted; }
+    border-bottom: 0px dotted;
+    text-decoration: none; }
   body#tinymce.wp-editor b,
   body#tinymce.wp-editor strong,
   body#tinymce.wp-editor .strong {

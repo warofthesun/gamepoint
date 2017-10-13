@@ -1,0 +1,98 @@
+@import "partials/normalize";
+
+// Sass variables
+@import "partials/variables";
+
+// typography
+@import "partials/typography";
+
+// Sass functions
+@import "partials/functions";
+
+// import mixins
+@import "partials/mixins";
+@import "modules/buttons";
+
+
+.tribe-events-schedule {
+    color: $brown;
+    font-size: .7em;
+    font-style: italic;
+    margin:-1em 0 1.5em;
+    border-bottom: 0px solid $brown;
+
+    h2 {
+        font-weight: 500;
+    }
+}
+
+
+.single-tribe_events {
+    .tribe-events-single-event-title {
+        color: $blue;
+        font-size: 3em;
+    }
+    .tribe-events-event-meta {
+        background: none;
+        border: 0;
+    }
+}
+.tribe-events-event-meta {
+    dl {
+        text-align: center;
+    }
+    dt {
+        font-size: 1.5em;
+        color: $brown;
+        margin-bottom: .3em;
+    }
+
+    dd {
+        font-size: 1.5em !important;
+        border-bottom: 0 !important;
+        margin-bottom: 1em !important;
+        color: $brown !important;
+    }
+
+    .tribe-events-meta-group {
+        width: 100% !important;
+        background-color: $tan;
+
+        .tribe-events-single-section-title {
+            font-size: 2em;
+            color: $blue;
+            text-transform: uppercase;
+            font-weight: 900;
+            text-align: center;
+            border-bottom: 1px solid $brown;
+        }
+    }
+}
+
+#tribe-bar-form .tribe-bar-filters {
+    display: none !important;
+}
+
+.tribe-events-page-title {
+    color: $brown !important;
+}
+
+.tribe-events-calendar thead th {
+    background-color: $blue;
+    border-left: 1px solid $blue;
+    border-right: 1px solid $blue;
+}
+
+#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured {
+    background: $brown;
+}
+
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] {
+    background-color: $blue;
+}
+
+.event_excerpt {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: $brown;
+}

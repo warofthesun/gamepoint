@@ -55,13 +55,12 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   } // end active
 
 } // end .button
-
 /*
 An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.pink-btn {
+.pink-btn, #tribe-events .tribe-events-button {
   @extend %btn; // here we load the btn defaults
   background-color: $pink;
 
