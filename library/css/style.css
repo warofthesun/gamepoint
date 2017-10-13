@@ -1408,12 +1408,19 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
+.navigation {
+  margin-top: 3em; }
+  .navigation .left {
+    text-align: left; }
+  .navigation .right {
+    text-align: right; }
+
 .header {
   background-color: none;
   background-image: url("../images/header-pattern@2x.png");
   background-size: contain;
   height: 150px;
-  margin-top: 5em; }
+  margin-top: 0em; }
 
 #logo {
   margin: 0.75em 0;
@@ -1480,9 +1487,11 @@ and more scalable.
     */ }
     .nav li a {
       display: block;
-      color: #fff;
+      color: #513628;
       text-decoration: none;
-      padding: 0.75em;
+      padding: 0 0.75em;
+      font-weight: bold;
+      text-transform: uppercase;
       /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
@@ -1494,6 +1503,14 @@ and more scalable.
       padding-left: 30px; }
 
 /* end .nav */
+#menu-right-header-menu {
+  float: right; }
+  #menu-right-header-menu li:last-child a {
+    padding-right: 0; }
+
+#menu-left-header-menu li:first-child a {
+  padding-left: 0; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -2060,8 +2077,8 @@ you can add resource intensive styles.
         has the possibility of being a mobile device.
         */ }
         .nav li a:hover, .nav li a:focus {
-          color: #fff;
-          text-decoration: underline; }
+          color: #b17c61;
+          text-decoration: none; }
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;

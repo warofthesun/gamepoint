@@ -6,13 +6,13 @@
 
 						<main id="main" class="m-all t-2of3 d-5of7 padding_remove-right cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							<article>
-							<?php $my_query = new WP_Query('pagename=welcome-to-gamepoint-cafe');
-							while ($my_query->have_posts()) : $my_query->the_post();?>
+								<?php $my_query = new WP_Query('pagename=welcome-to-gamepoint-cafe');
+								while ($my_query->have_posts()) : $my_query->the_post();?>
 
-								<h2><?php the_field('title'); ?></h2>
-								<?php the_content() ?>
+									<h2><?php the_field('title'); ?></h2>
+									<?php the_content() ?>
 
-							<?php endwhile; ?>
+								<?php endwhile; ?>
 							</article>
 							<article class="homepage_event">
 								<?php $loop = new WP_Query(
@@ -59,7 +59,6 @@
 								<h2>Latest Games</h2>
 								<ul>
 								<?php $post_type = 'games';
-
 									// Get all the taxonomies for this post type
 									$taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
 
@@ -92,8 +91,10 @@
 									        <?php endwhile; endif; ?>
 									    <?php endforeach; endforeach; ?>
 								</ul>
+								<div style="clear:both;text-align:center;">
+									<a href="#" class="pink-btn">view game library</a>
+								</div>
 							</article>
-
 						</main>
 
 					<?php get_sidebar('sidebar-home'); ?>

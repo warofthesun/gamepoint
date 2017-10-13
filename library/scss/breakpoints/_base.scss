@@ -165,12 +165,24 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
+.navigation {
+	margin-top:3em;
+
+	.left {
+		text-align: left;
+	}
+
+	.right {
+		text-align: right;
+	}
+}
+
 .header {
 	background-color: none;
 	background-image: url('../images/header-pattern@2x.png');
 	background-size: contain;
     height: 150px;
-    margin-top: 5em;
+    margin-top: 0em;
 }
 
 #logo {
@@ -251,9 +263,11 @@ and more scalable.
 
 		a {
 			display: block;
-			color: $white;
+			color: $brown;
 			text-decoration: none;
-			padding: 0.75em;
+			padding:0 0.75em;
+			font-weight: bold;
+			text-transform: uppercase;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -313,6 +327,23 @@ and more scalable.
 
 } /* end .nav */
 
+#menu-right-header-menu {
+	float: right;
+
+	li:last-child {
+		a {
+			padding-right: 0;
+		}
+	}
+}
+
+#menu-left-header-menu {
+		li:first-child {
+			a {
+				padding-left: 0;
+			}
+		}
+}
 
 /*********************
 POSTS & CONTENT STYLES
