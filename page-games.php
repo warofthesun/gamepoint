@@ -12,47 +12,25 @@
 
 						<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php $post_type = 'games';
-								// Get all the taxonomies for this post type
-								$taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
+							<?php $args = array(
+        						'post_type' => 'games' );
 
-								foreach( $taxonomies as $taxonomy ) :
+    							$categories = get_categories( $args );
+    							foreach ( $categories as $category ) {
 
-									// Gets every "category" (term) in this taxonomy to get the respective posts
-									$terms = get_terms( $taxonomy );
+    							echo '<h2>' . $category->name . '</h2>';
 
-									foreach( $terms as $term ) :
+        						$args['category'] = $category->term_id;
+        						$posts = get_posts($args); ?>
 
-										$args = array(
-												'post_type' => $post_type,
-												'posts_per_page' => -1,  //show all posts per category
-												'orderby' => 'title',
-												'order' => 'ASC',
-												'tax_query' => array(
-													array(
-														'taxonomy' => $taxonomy,
-														'field' => 'slug',
-														'terms' => $term->slug,
-													)
-												)
-
-											);
-										$posts = new WP_Query($args); ?>
-										<ul>
-										<?php
-
-										if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
-										<li>
-											<div class="game_name"><?php the_title(); ?></div>
-											<div class="game_category"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></div>
-										</li>
-										<?php endwhile; endif; ?>
-										</ul>
-									<?php endforeach; endforeach; ?>
+						        <ul class="menu-items-container">
+						            <?php foreach($posts as $post) { ?>
+						                <li><?php the_title(); ?> <?php echo $item_price; ?></li>
+						            <?php  } ?>
+						        </ul>
+						<?php } ?>
 						</main>
 				</div>
-
 			</div>
-
 
 <?php get_footer(); ?>
