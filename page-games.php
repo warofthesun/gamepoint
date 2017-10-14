@@ -37,18 +37,16 @@
 
 											);
 										$posts = new WP_Query($args); ?>
-<div class="game_category"><?php echo $term->name.'<br />'; ?></div>
-<ul>
-<?php
-										if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
+										<div class="game_category"><?php echo $term->name.'<br />'; ?></div>
+										<ul>
+										<?php
+											if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
 										<li>
-
 											<div class="game_name"><?php the_title(); ?></div>
 										</li>
 										<?php endwhile; endif; ?>
 										</ul>
 									<?php endforeach; endforeach; ?>
-
 						</main>
 				</div>
 			</div>
