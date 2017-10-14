@@ -59,11 +59,11 @@ function games() {
 		) /* end of options */
 	); /* end of register post type */
 
-	/* this adds your post categories to your custom post type */
+	/* this adds your post categories to your custom post type
 	register_taxonomy_for_object_type( 'category', 'games' );
-	/* this adds your post tags to your custom post type */
+	/* this adds your post tags to your custom post type
 	register_taxonomy_for_object_type( 'post_tag', 'games' );
-
+*/
 }
 
 	// adding the function to the Wordpress init
@@ -79,7 +79,7 @@ function games() {
 		array('games'), /* if you change the name of register_post_type( 'games', then you have to change this */
 		array('hierarchical' => true,     /* if this is true, it acts like categories */
 			'labels' => array(
-				'name' => __( 'Games', 'bonestheme' ), /* name of the custom taxonomy */
+				'name' => __( 'Game Categories', 'bonestheme' ), /* name of the custom taxonomy */
 				'singular_name' => __( 'Game', 'bonestheme' ), /* single taxonomy name */
 				'search_items' =>  __( 'Search Games', 'bonestheme' ), /* search title for taxomony */
 				'all_items' => __( 'All Games', 'bonestheme' ), /* all title for taxonomies */
@@ -87,7 +87,7 @@ function games() {
 				'parent_item_colon' => __( 'Parent Game:', 'bonestheme' ), /* parent taxonomy title */
 				'edit_item' => __( 'Edit Game', 'bonestheme' ), /* edit custom taxonomy title */
 				'update_item' => __( 'Update Game', 'bonestheme' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Game', 'bonestheme' ), /* add new title for taxonomy */
+				'add_new_item' => __( 'Add New Category', 'bonestheme' ), /* add new title for taxonomy */
 				'new_item_name' => __( 'New Game Name', 'bonestheme' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true,

@@ -81,9 +81,10 @@
 									            );
 									        $posts = new WP_Query($args);
 
+
 									        if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
 											<li>
-												<div class="game_category"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></div>
+												<div class="game_category"><?php echo $term->name.'<br />'; ?></div>
 												<div class="game_name"><?php the_title(); ?></div>
 											</li>
 									        <?php endwhile; endif; ?>
