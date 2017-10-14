@@ -79,7 +79,7 @@ function games() {
 		array('games'), /* if you change the name of register_post_type( 'games', then you have to change this */
 		array('hierarchical' => true,     /* if this is true, it acts like categories */
 			'labels' => array(
-				'name' => __( 'Games', 'bonestheme' ), /* name of the custom taxonomy */
+				'name' => __( 'Game Categories', 'bonestheme' ), /* name of the custom taxonomy */
 				'singular_name' => __( 'Game', 'bonestheme' ), /* single taxonomy name */
 				'search_items' =>  __( 'Search Games', 'bonestheme' ), /* search title for taxomony */
 				'all_items' => __( 'All Games', 'bonestheme' ), /* all title for taxonomies */
