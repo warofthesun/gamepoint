@@ -1,9 +1,7 @@
 <!--front-page-->
 <?php get_header(); ?>
-
 			<div id="content">
 				<div id="inner-content" class="wrap cf">
-
 						<main id="main" class="m-all t-2of3 d-5of7 padding_remove-right cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							<article>
 								<?php $my_query = new WP_Query('pagename=welcome-to-gamepoint-cafe');
