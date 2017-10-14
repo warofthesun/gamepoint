@@ -49,10 +49,6 @@
 										</div>
 										<?php endwhile; ?>
 									</article>
-
-
-
-
 							<div style="clear:both;"></div>
 							<!--START LATEST GAMES-->
 							<article class="latest_games">
@@ -71,7 +67,7 @@
 
 									        $args = array(
 									                'post_type' => $post_type,
-									                'posts_per_page' => 1,  //show all posts
+									                'posts_per_page' => 1,  //show one post per category
 									                'tax_query' => array(
 									                    array(
 									                        'taxonomy' => $taxonomy,

@@ -3,7 +3,7 @@
  Template Name: Games Page
 */
 ?>
-<!--page-custom-->
+<!--page-games-->
 <?php get_header(); ?>
 
 			<div id="content">
@@ -12,58 +12,44 @@
 
 						<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php $post_type = 'games';
+								// Get all the taxonomies for this post type
+								$taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+								foreach( $taxonomies as $taxonomy ) :
 
-								<!--header class="article-header">
+									// Gets every "category" (term) in this taxonomy to get the respective posts
+									$terms = get_terms( $taxonomy );
 
-									<h1 class="page-title"><?php the_title(); ?></h1>
+									foreach( $terms as $term ) :
 
-									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
+										$args = array(
+												'post_type' => $post_type,
+												'posts_per_page' => -1,  //show all posts per category
+												'orderby' => 'title',
+												'order' => 'ASC',
+												'tax_query' => array(
+													array(
+														'taxonomy' => $taxonomy,
+														'field' => 'slug',
+														'terms' => $term->slug,
+													)
+												)
 
+											);
+										$posts = new WP_Query($args); ?>
+										<ul>
+										<?php
 
-								</header-->
-
-								<section class="entry-content cf" itemprop="articleBody">
-									<?php
-										// the content (pretty self explanatory huh)
-										the_content();
-									?>
-								</section>
-
-
-								<footer class="article-footer">
-
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer>
-
-								<?php comments_template(); ?>
-
-							</article>
-
-							<?php endwhile; else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
+										if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
+										<li>
+											<div class="game_name"><?php the_title(); ?></div>
+											<div class="game_category"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></div>
+										</li>
+										<?php endwhile; endif; ?>
+										</ul>
+									<?php endforeach; endforeach; ?>
 						</main>
-
-
 				</div>
 
 			</div>
