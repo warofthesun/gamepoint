@@ -59,10 +59,6 @@ function games() {
 		) /* end of options */
 	); /* end of register post type */
 
-	/* this adds your post categories to your custom post type */
-	register_taxonomy_for_object_type( 'category', 'games' );
-	/* this adds your post tags to your custom post type */
-	register_taxonomy_for_object_type( 'post_tag', 'games' );
 
 }
 
@@ -87,7 +83,7 @@ function games() {
 				'parent_item_colon' => __( 'Parent Game:', 'bonestheme' ), /* parent taxonomy title */
 				'edit_item' => __( 'Edit Game', 'bonestheme' ), /* edit custom taxonomy title */
 				'update_item' => __( 'Update Game', 'bonestheme' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Game', 'bonestheme' ), /* add new title for taxonomy */
+				'add_new_item' => __( 'Add New Game Category', 'bonestheme' ), /* add new title for taxonomy */
 				'new_item_name' => __( 'New Game Name', 'bonestheme' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true,
