@@ -25,7 +25,7 @@
 
 						        <ul class="menu-items-container">
 						            <?php foreach($posts as $post) { ?>
-						                <li><?php the_title(); ?> <?php echo $item_price; ?></li>
+						                <li><?php the_title(); ?></li>
 						            <?php  } ?>
 						        </ul>
 						<?php } ?>
