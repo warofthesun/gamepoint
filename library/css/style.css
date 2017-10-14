@@ -1552,22 +1552,27 @@ article {
   .homepage_event .event_content {
     padding: 1em 0; }
 
-.latest_games ul {
-  margin-top: 1em; }
-  .latest_games ul li {
+.game_list {
+  clear: both;
+  margin: 2em 0;
+  float: left;
+  width: 100%; }
+  .game_list ul {
+    margin: 0; }
+  .game_list li {
     float: left;
-    width: 47%;
-    margin-right: 1em;
-    margin-bottom: 2em;
-    background-color: #A3DED2; }
-.latest_games .game_category {
+    width: 25%; }
+
+.game_category {
   color: #fff;
   text-transform: uppercase;
   font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 1.1em;
-  text-align: center; }
-.latest_games .game_name {
+  text-align: center;
+  background-color: #A3DED2; }
+
+.game_name {
   text-align: center;
   font-family: "Just Another Hand", cursive;
   text-transform: capitalize;
@@ -1577,6 +1582,14 @@ article {
   background-color: #fff;
   border: 1px solid #F7F4E2;
   padding-top: .1em; }
+
+.latest_games ul {
+  margin-top: 1em; }
+  .latest_games ul li {
+    float: left;
+    width: 47%;
+    margin-right: 1em;
+    margin-bottom: 2em; }
 
 .hentry {
   background-color: none;
