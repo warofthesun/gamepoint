@@ -12,23 +12,43 @@
 
 						<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php $args = array(
-        						'post_type' => 'games' );
 
-    							$categories = get_categories( $args );
-    							foreach ( $categories as $category ) {
+							<?php $post_type = 'games';
+								// Get all the taxonomies for this post type
+								$taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
 
-    							echo '<h2>' . $category->name . '</h2>';
+								foreach( $taxonomies as $taxonomy ) :
 
-        						$args['category'] = $category->term_id;
-        						$posts = get_posts($args); ?>
+									// Gets every "category" (term) in this taxonomy to get the respective posts
+									$terms = get_terms( $taxonomy );
 
-						        <ul class="menu-items-container">
-						            <?php foreach($posts as $post) { ?>
-						                <li><?php the_title(); ?></li>
-						            <?php  } ?>
-						        </ul>
-						<?php } ?>
+									foreach( $terms as $term ) :
+
+										$args = array(
+												'post_type' => $post_type,
+												'posts_per_page' => -1,  //show all posts
+												'tax_query' => array(
+													array(
+														'taxonomy' => $taxonomy,
+														'field' => 'slug',
+														'terms' => $term->slug,
+													)
+												)
+
+											);
+										$posts = new WP_Query($args); ?>
+<div class="game_category"><?php echo $term->name.'<br />'; ?></div>
+<ul>
+<?php
+										if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
+										<li>
+
+											<div class="game_name"><?php the_title(); ?></div>
+										</li>
+										<?php endwhile; endif; ?>
+										</ul>
+									<?php endforeach; endforeach; ?>
+
 						</main>
 				</div>
 			</div>
