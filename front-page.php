@@ -1,9 +1,7 @@
 <!--front-page-->
 <?php get_header(); ?>
-
 			<div id="content">
 				<div id="inner-content" class="wrap cf">
-
 						<main id="main" class="m-all t-2of3 d-5of7 padding_remove-right cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							<article>
 								<?php $my_query = new WP_Query('pagename=welcome-to-gamepoint-cafe');
@@ -49,6 +47,10 @@
 										</div>
 										<?php endwhile; ?>
 									</article>
+
+
+
+
 							<div style="clear:both;"></div>
 							<!--START LATEST GAMES-->
 							<article class="latest_games">
@@ -67,7 +69,7 @@
 
 									        $args = array(
 									                'post_type' => $post_type,
-									                'posts_per_page' => 1,  //show one post per category
+									                'posts_per_page' => 1,  //show all posts
 									                'tax_query' => array(
 									                    array(
 									                        'taxonomy' => $taxonomy,
@@ -79,9 +81,10 @@
 									            );
 									        $posts = new WP_Query($args);
 
+
 									        if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
 											<li>
-												<div class="game_category"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></div>
+												<div class="game_category"><?php echo $term->name.'<br />'; ?></div>
 												<div class="game_name"><?php the_title(); ?></div>
 											</li>
 									        <?php endwhile; endif; ?>
