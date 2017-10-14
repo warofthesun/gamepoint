@@ -11,7 +11,9 @@
 				<div id="inner-content" class="wrap cf">
 
 						<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+								<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+							<?php endwhile; endif; ?>
 
 							<?php $post_type = 'games';
 								// Get all the taxonomies for this post type
@@ -37,15 +39,19 @@
 
 											);
 										$posts = new WP_Query($args); ?>
-										<div class="game_category"><?php echo $term->name.'<br />'; ?></div>
-										<ul>
-										<?php
-											if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
-										<li>
-											<div class="game_name"><?php the_title(); ?></div>
-										</li>
-										<?php endwhile; endif; ?>
-										</ul>
+										<div class="game_list">
+											<div class="game_category">
+												<?php echo $term->name.' '; ?>
+											</div>
+											<ul>
+											<?php
+												if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
+											<li>
+												<div class="game_name"><?php the_title(); ?></div>
+											</li>
+											<?php endwhile; endif; ?>
+											</ul>
+										</div>
 									<?php endforeach; endforeach; ?>
 						</main>
 				</div>
