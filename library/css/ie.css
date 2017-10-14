@@ -242,6 +242,10 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.game_list li {
+  float: left;
+  width: 50%; }
+
 /* entry content */
 .entry-content {
   /* at this larger size, we can start to align images */ }
@@ -289,6 +293,10 @@ LAYOUT & GRID STYLES
 *********************/
 .wrap {
   width: 760px; }
+
+.game_list li {
+  float: left;
+  width: 33%; }
 
 /*********************
 HEADER STYLES

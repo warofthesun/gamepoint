@@ -1556,12 +1556,22 @@ article {
   clear: both;
   margin: 2em 0;
   float: left;
-  width: 100%; }
+  width: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff; }
+  .game_list .game_name {
+    font-size: 2em;
+    letter-spacing: 1px;
+    border: 0;
+    border-bottom: 1px solid #F7F4E2;
+    padding: 0.3em 0 0.2em;
+    text-shadow: 0px 0px 0px; }
   .game_list ul {
     margin: 0; }
   .game_list li {
     float: left;
-    width: 25%; }
+    width: 100%; }
 
 .game_category {
   color: #fff;
@@ -2008,6 +2018,10 @@ tweeners.
   /*********************
   POSTS & CONTENT STYLES
   *********************/
+  .game_list li {
+    float: left;
+    width: 50%; }
+
   /* entry content */
   .entry-content {
     /* at this larger size, we can start to align images */ }
@@ -2062,6 +2076,10 @@ you can add resource intensive styles.
   *********************/
   .wrap {
     width: 760px; }
+
+  .game_list li {
+    float: left;
+    width: 33%; }
 
   /*********************
   HEADER STYLES
@@ -2200,15 +2218,20 @@ This is for the larger monitors and possibly full screen viewers.
 *********************/
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name:
+  Author:
   
   Stylesheet: Super Large Monitor Stylesheet
   
   You can add some advanced styles here if you like. This kicks in
   on larger screens.
   
-  ******************************************************************/ }
+  ******************************************************************/
+  .game_list .game_name {
+    font-size: 1.5em; }
+  .game_list li {
+    float: left;
+    width: 25%; } }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with

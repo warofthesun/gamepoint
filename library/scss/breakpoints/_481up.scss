@@ -77,6 +77,14 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 
+.game_list {
+	li {
+		float: left;
+		width: 50%;
+	}
+}
+
+
 /* entry content */
 .entry-content {
 
@@ -114,4 +122,3 @@ do they need tweaking?
 		li {}
 	}
 } /* end .footer-links */
-

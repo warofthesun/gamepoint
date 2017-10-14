@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name: 
-Author: 
+Site Name:
+Author:
 
 Stylesheet: Super Large Monitor Stylesheet
 
@@ -9,3 +9,12 @@ on larger screens.
 
 ******************************************************************/
 
+.game_list {
+    .game_name {
+        font-size: 1.5em;
+    }
+	li {
+		float: left;
+		width: 25%;
+	}
+}

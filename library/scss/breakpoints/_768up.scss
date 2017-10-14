@@ -27,6 +27,13 @@ LAYOUT & GRID STYLES
 	width: 760px;
 }
 
+.game_list {
+	li {
+		float: left;
+		width: 33%;
+	}
+}
+
 /*********************
 HEADER STYLES
 *********************/

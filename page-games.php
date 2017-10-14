@@ -29,6 +29,8 @@
 										$args = array(
 												'post_type' => $post_type,
 												'posts_per_page' => -1,  //show all posts
+												'orderby' => 'title',
+												'order' => 'ASC',
 												'tax_query' => array(
 													array(
 														'taxonomy' => $taxonomy,
