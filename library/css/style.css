@@ -1558,9 +1558,10 @@ article {
     float: left;
     width: 47%;
     margin-right: 1em;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    background-color: #A3DED2; }
 .latest_games .game_category {
-  color: #F7ACB8;
+  color: #fff;
   text-transform: uppercase;
   font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
