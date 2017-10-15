@@ -948,7 +948,8 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   position: relative;
   font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  color: #F7F4E2 !important;
+  color: #fff !important;
+  letter-spacing: 1px;
   font-size: .9em;
   line-height: 34px;
   font-weight: bold;
@@ -959,14 +960,14 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   text-transform: uppercase;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  box-shadow: 1px 1px 5px #f1ecce; }
   .pink-btn:hover, .comment-reply-link:hover, #submit:hover, #tribe-events .tribe-events-button:hover, .pink-btn:focus, .comment-reply-link:focus, #submit:focus, #tribe-events .tribe-events-button:focus {
     color: #fff;
     text-decoration: none;
     outline: none;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important; }
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
+    border-bottom: 0px !important; }
   .pink-btn:active, .comment-reply-link:active, #submit:active, #tribe-events .tribe-events-button:active {
     top: 1px; }
 
@@ -976,7 +977,8 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 .pink-btn, .comment-reply-link, #submit, #tribe-events .tribe-events-button {
-  background-color: #F7ACB8; }
+  background-color: #F7ACB8;
+  text-shadow: 1px 1px 5px #f595a4; }
   .pink-btn:hover, .comment-reply-link:hover, #submit:hover, .pink-btn:focus, .comment-reply-link:focus, #submit:focus, #tribe-events .tribe-events-button:hover, #tribe-events .tribe-events-button:focus {
     background-color: #f599a8; }
   .pink-btn:active, .comment-reply-link:active, #submit:active, #tribe-events .tribe-events-button:active {
@@ -1351,12 +1353,15 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #513628;
+  color: #2f1f17;
+  text-decoration: none;
+  font-weight: 500;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #322219; }
+    color: #513628;
+    border-bottom: 1px solid #513628; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1434,6 +1439,9 @@ HEADER STYLES
   #inner-footer #logo a {
     color: #A3DED2;
     font-size: 2.5em; }
+    #inner-footer #logo a:hover {
+      text-decoration: none;
+      border-bottom: 0px; }
 #inner-footer .footer_info {
   float: left;
   margin-left: 1em;
@@ -1468,12 +1476,13 @@ HEADER STYLES
     color: #F7F4E2;
     border: 2px solid #F7F4E2;
     text-decoration: none;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    text-shadow: 1px 1px 5px #90d7c9;
+    box-shadow: 1px 1px 5px #402b20; }
     #inner-footer .social .fa:hover {
       background-color: #7dd1c0;
       box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
-      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important; }
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
+      border-bottom: 0px !important; }
 
 #logo {
   margin: 0.75em 0;
@@ -1488,6 +1497,9 @@ HEADER STYLES
   #logo a {
     color: #513628;
     font-size: 6em; }
+    #logo a:hover {
+      text-decoration: none;
+      border-bottom: 0px; }
 
 .header_info {
   color: #513628; }
@@ -1620,8 +1632,7 @@ article {
   margin: 2em 0;
   float: left;
   width: 100%;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px #f1ecce;
   background-color: #fff; }
   .game_list .game_name {
     font-size: 2em;
@@ -1664,17 +1675,33 @@ article {
     margin-right: 1em;
     margin-bottom: 2em; }
 
+.archive .sidebar {
+  margin-top: 0; }
+.archive .page-title {
+  font-size: 1em;
+  margin-top: -1.5em;
+  margin-bottom: 1.5em;
+  font-weight: normal; }
+.archive .entry-content {
+  border-top: 0px;
+  padding: 1em; }
+.archive .hentry header {
+  padding-bottom: 0; }
+.archive .hentry footer {
+  background-color: transparent !important; }
+
 .hentry {
   background-color: none;
   border-radius: 3px;
-  margin-bottom: 1.5em;
+  margin-bottom: 0em;
   border: 0px solid #513628; }
   .hentry header {
-    border-bottom: 1px solid #f8f9fa;
-    padding: 1.5em; }
+    padding: 1em; }
   .hentry footer {
     padding: 1.5em;
-    border-top: 1px solid #f8f9fa; }
+    border-top: 3px solid #A3DED2;
+    background-color: #F7F4E2;
+    color: #513628; }
     .hentry footer p {
       margin: 0; }
 
@@ -1683,6 +1710,10 @@ article {
 .page-title,
 .entry-title {
   margin: 0; }
+
+.single-title {
+  color: #A3DED2;
+  font-size: 3em; }
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1695,13 +1726,14 @@ article {
 /* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
-  color: #9fa6b4;
+  color: #A3DED2;
   font-style: italic;
   margin: 0; }
 
 /* entry content */
 .entry-content {
   padding: 1.5em 1.5em 0;
+  border-top: 1px solid #A3DED2;
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -1717,7 +1749,7 @@ article {
     .entry-content table caption {
       margin: 0 0 7px;
       font-size: 0.75em;
-      color: #9fa6b4;
+      color: #513628;
       text-transform: uppercase;
       letter-spacing: 1px; }
   .entry-content tr {
@@ -1768,7 +1800,6 @@ article {
 /* end .entry-content */
 .wp-caption {
   max-width: 100%;
-  background: #eee;
   padding: 5px;
   /* images inside wp-caption */ }
   .wp-caption img {
@@ -1778,7 +1809,8 @@ article {
   .wp-caption p.wp-caption-text {
     font-size: 0.85em;
     margin: 4px 0 7px;
-    text-align: center; }
+    text-align: center;
+    font-style: italic; }
 
 /* end .wp-caption */
 /* image gallery styles */
@@ -1988,8 +2020,8 @@ SIDEBARS & ASIDES
   font-size: 1.5em;
   color: #F7F4E2;
   border: 2px solid #F7F4E2;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 5px #f595a4; }
 #sidebar-home.sidebar {
   margin-top: 0;
   border-left: 0px solid #513628; }
@@ -1999,8 +2031,27 @@ SIDEBARS & ASIDES
     border-bottom: 4px solid #A3DED2;
     margin-bottom: 2em; }
 
-.widget ul li {
-  /* deep nesting */ }
+.widgettitle {
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  background-color: #A3DED2;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 1px;
+  padding-top: 3px;
+  border-bottom: 0 !important;
+  margin-bottom: 0 !important; }
+
+.widget ul {
+  background-color: #fff;
+  margin-top: 0;
+  padding: .5em;
+  border-top: 2px solid #A3DED2;
+  box-shadow: 1px 1px 5px #f8f5e1; }
+  .widget ul li {
+    /* deep nesting */ }
 
 .no-widgets {
   background-color: none;
@@ -2219,7 +2270,7 @@ you can add resource intensive styles.
     margin-top: 2.2em; }
 
   .widgettitle {
-    border-bottom: 2px solid #444;
+    border-bottom: 0px solid #444;
     margin-bottom: 0.75em; }
 
   .widget {

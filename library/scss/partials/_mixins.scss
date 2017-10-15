@@ -70,14 +70,14 @@ probably best not to use it. I mean, were you going to anyway? */
 	box-sizing:         $type;
 }
 
-@mixin drop-shadow($details: 1px 1px 1px rgba(0,0,0,0.2)){
-    box-shadow: $details;
-    text-shadow: $details;
+@mixin drop-shadow($type: box, $color: $tan){
+    #{$type}-shadow: 1px 1px 5px darken($color, 5%);
 }
 
 @mixin drop-shadow-hover($details: 0px 0px 1px rgba(0,0,0,0.2)){
     box-shadow: $details !important;
     text-shadow: $details !important;
+    border-bottom: 0px !important;
 }
 
 /*************
@@ -99,7 +99,6 @@ ICON STYLE
     font-size: 1.5em;
     color: $tan;
     border: 2px solid $tan;
-    @include drop-shadow;
 }
 
 @mixin icon-blue(){
@@ -115,7 +114,6 @@ ICON STYLE
     color: $tan;
     border: 2px solid $tan;
     text-decoration: none;
-    @include drop-shadow;
 }
 
 @mixin icon-hover($color) {

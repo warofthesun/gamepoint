@@ -36,8 +36,8 @@ $yellow:            #FFD26C;
 $tan:               #F7F4E2;
 $text-color:        $brown;
 
-$link-color:        $brown;
-$link-hover:        darken($link-color, 9%);
+$link-color:        darken($brown, 10%);
+$link-hover:        lighten($link-color, 10%);
 
 $border-color:      $brown;
 $disabled-gray:     #cfcfcf;

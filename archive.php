@@ -1,17 +1,17 @@
 <!--archive-->
 <?php get_header(); ?>
 
-			<div id="content">
+			<div id="content" class="archive">
 
 				<div id="inner-content" class="wrap cf">
-
+					<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					?>
 						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
-							the_archive_description( '<div class="taxonomy-description">', '</div>' );
-							?>
-							
+
+
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
@@ -32,7 +32,7 @@
 
 								<section class="entry-content cf">
 
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+									<!--?php the_post_thumbnail( 'bones-thumb-300' ); ?-->
 
 									<?php the_excerpt(); ?>
 

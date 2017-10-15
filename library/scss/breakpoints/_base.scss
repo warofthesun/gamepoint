@@ -81,10 +81,13 @@ LINK STYLES
 
 a, a:visited {
 	color: $link-color;
+	text-decoration: none;
+	font-weight: 500;
 
 	/* on hover */
 	&:hover, &:focus {
 		color: $link-hover;
+		border-bottom: 1px solid $link-hover;
 	}
 
 	/* on click */
@@ -196,6 +199,11 @@ HEADER STYLES
 		a {
 			color: $blue;
 			font-size: 2.5em;
+
+			&:hover {
+				text-decoration: none;
+				border-bottom: 0px;
+			}
 		}
 	}
 
@@ -230,6 +238,8 @@ HEADER STYLES
 		.fa {
 			margin:0 .5em;
 			@include icon-blue;
+			@include drop-shadow(text, $blue);
+			@include drop-shadow(box, $brown);
 
 			&:hover {
 				@include icon-hover($blue);
@@ -253,6 +263,11 @@ HEADER STYLES
 	a {
 		color: $brown;
 		font-size: 6em;
+
+		&:hover {
+		text-decoration: none;
+		border-bottom: 0px;
+		}
 	}
 }
 
@@ -547,20 +562,48 @@ article {
 	}
 }
 
+.archive {
+	.sidebar{
+		margin-top: 0;
+	}
+	.page-title {
+		font-size: 1em;
+    	margin-top: -1.5em;
+    	margin-bottom: 1.5em;
+    	font-weight: normal;
+	}
+
+	.entry-content {
+		border-top: 0px;
+		padding: 1em;
+	}
+	.hentry{
+		header {
+			padding-bottom: 0;
+		}
+	footer {
+		background-color: transparent !important;
+	}
+	}
+}
+
 		.hentry {
 			background-color: none;
 			border-radius: 3px;
-			margin-bottom: 1.5em;
+			margin-bottom: 0em;
 			border: 0px solid $border-color;
 
 			header {
-				border-bottom: 1px solid $light-gray;
-				padding: 1.5em;
+				padding: 1em;
 			}
+
+
 
 			footer {
 				padding: 1.5em;
-				border-top: 1px solid $light-gray;
+				border-top: 3px solid $blue;
+				background-color: $tan;
+				color: $brown;
 
 				p {
 					margin: 0;
@@ -575,7 +618,10 @@ article {
 			margin: 0;
 		}
 
-		.single-title {}
+		.single-title {
+			color: $blue;
+			font-size: 3em;
+		}
 
 		.page-title {}
 
@@ -595,7 +641,7 @@ article {
 
 		/* post meta */
 		.byline {
-			color: $meta-gray;
+			color: $blue;
 			font-style: italic;
 			margin: 0;
 
@@ -605,6 +651,7 @@ article {
 		/* entry content */
 		.entry-content {
 			padding: 1.5em 1.5em 0;
+			border-top: 1px solid $blue;
 
 			p {
 				margin: 0 0 1.5em;
@@ -639,7 +686,7 @@ article {
 				caption {
 					margin: 0 0 7px;
 					font-size: 0.75em;
-					color: $meta-gray;
+					color: $brown;
 					text-transform: uppercase;
 					letter-spacing: 1px;
 				}
@@ -732,7 +779,6 @@ article {
 
 		.wp-caption {
 			max-width: 100%;
-			background: #eee;
 			padding: 5px;
 
 			/* images inside wp-caption */
@@ -746,6 +792,7 @@ article {
 				font-size: 0.85em;
 				margin: 4px 0 7px;
 				text-align: center;
+				font-style: italic;
 			}
 
 		} /* end .wp-caption */
@@ -1119,6 +1166,8 @@ SIDEBARS & ASIDES
 	&:before {
 		content: "\f16d";
 		@include icon-pink;
+		@include drop-shadow(box, rgba(0,0,0,0.2));
+		@include drop-shadow(text, $pink);
 	}
 	&.sidebar {
 		margin-top: 0;
@@ -1137,11 +1186,28 @@ SIDEBARS & ASIDES
 
 .sidebar {}
 
-	.widgettitle {}
+	.widgettitle {
+		font-family: $sans-serif;
+		font-weight: bold;
+		background-color: $blue;
+		text-align: center;
+		text-transform: uppercase;
+		color: $white;
+		font-size: 1em;
+		letter-spacing: 1px;
+		padding-top: 3px;
+		border-bottom: 0 !important;
+		margin-bottom: 0 !important;
+	}
 
 	.widget {
 
 		ul {
+			background-color: $white;
+			margin-top: 0;
+			padding: .5em;
+			border-top: 2px solid $blue;
+			@include drop-shadow(box, #fdfcf6);
 
 			li {
 

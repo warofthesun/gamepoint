@@ -29,7 +29,8 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   position: relative;
   font-family: $sans-serif;
   text-decoration: none;
-  color: $tan !important;
+  color: $white !important;
+  letter-spacing: 1px;
   font-size: .9em;
   line-height: 34px;
   font-weight: bold;
@@ -39,7 +40,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   cursor: pointer;
   text-transform: uppercase;
   @include transition(background-color 0.14s ease-in-out);
-  @include drop-shadow;
+  @include drop-shadow(box, $tan);
 
   // hovering on the btn
   &:hover, &:focus {
@@ -63,6 +64,7 @@ and it will create a button dependant on those variables.
 .pink-btn, #tribe-events .tribe-events-button {
   @extend %btn; // here we load the btn defaults
   background-color: $pink;
+  @include drop-shadow(text, $pink);
 
   &:hover,
   &:focus {

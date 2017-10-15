@@ -14,7 +14,7 @@
 			                  <header class="article-header entry-header">
 
 			                    <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
-
+								<?php the_post_thumbnail( 'large' ); ?>
 			                    <p class="byline entry-meta vcard">
 
 			                      <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
@@ -33,13 +33,13 @@
 			                      // the content (pretty self explanatory huh)
 			                      the_content();
 
-			                      
+
 			                    ?>
 			                  </section> <?php // end article section ?>
 
 			                  <footer class="article-footer">
 
-			                    <?php printf( __( 'filed under', 'bonestheme' ).': %1$s', get_the_category_list(', ') ); ?>
+			                    <?php printf( __( 'Filed under', 'bonestheme' ).': %1$s', get_the_category_list(', ') ); ?>
 
 			                    <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 
