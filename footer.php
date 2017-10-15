@@ -1,7 +1,7 @@
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
 				<div id="inner-footer" class="wrap cf">
-					<div class="m-all t-1of2 d-1of2 cf">
+					<div class="m-all t-all d-1of2 cf">
 						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization">
 							<a href="<?php echo home_url(); ?>" class="gp-gamepoint-logo"></a>
 						</p>
@@ -13,9 +13,8 @@
 							<div><?php the_field('address'); ?></div>
 
 						</div>
-
 					</div>
-					<div class="m-all t-1of2 d-1of2 last-col cf">
+					<div class="m-all t-all d-1of2 last-col cf">
 						<div class="social">
 							<p>Get Social</p>
 						<?php if( have_rows('social_platform') ): while ( have_rows('social_platform') ) : the_row(); ?>
