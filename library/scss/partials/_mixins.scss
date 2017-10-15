@@ -79,3 +79,45 @@ probably best not to use it. I mean, were you going to anyway? */
     box-shadow: $details !important;
     text-shadow: $details !important;
 }
+
+/*************
+ICON STYLE
+**************/
+
+@mixin icon-pink(){
+    font-family: "FontAwesome";
+    background-color: $pink;
+    border-radius: 34px;
+    height: 30px;
+    width: 45px;
+    margin: 0 auto;
+    margin-bottom: -30px;
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    line-height: 180%;
+    font-size: 1.5em;
+    color: $tan;
+    border: 2px solid $tan;
+    @include drop-shadow;
+}
+
+@mixin icon-blue(){
+    font-family: "FontAwesome";
+    background-color: $blue;
+    border-radius: 34px;
+    height: 45px;
+    width: 45px;
+    z-index: 99;
+    text-align: center;
+    line-height: 180%;
+    font-size: 1.5em;
+    color: $tan;
+    border: 2px solid $tan;
+    text-decoration: none;
+    @include drop-shadow;
+}
+
+@mixin icon-hover($color) {
+    background-color: darken($color, 10%)
+}

@@ -185,6 +185,60 @@ HEADER STYLES
     margin-top: 0em;
 }
 
+#inner-footer {
+	#logo {
+		margin: 0.5em 0;
+		background-color: transparent !important;
+		height: 100px;
+		width: 100px;
+		float: left;
+
+		a {
+			color: $blue;
+			font-size: 2.5em;
+		}
+	}
+
+	.footer_info {
+		float: left;
+		margin-left: 1em;
+		padding-left: 1em;
+		border-left: 1px solid $blue;
+		margin-top:2.5em;
+
+		a {
+			color: $blue;
+			text-decoration: none;
+
+			&:hover {
+				color: darken($blue, 10%);
+				border-bottom: 1px solid $blue;
+			}
+		}
+	}
+
+	.social {
+		text-align: center;
+		margin: 1.5em 0 1em;
+
+		p {
+			font-family: $cursive;
+			font-size: 2em;
+			display: inline;
+			margin-right: .5em;
+		}
+		.fa {
+			margin:0 .5em;
+			@include icon-blue;
+
+			&:hover {
+				@include icon-hover($blue);
+				@include drop-shadow-hover;
+			}
+		}
+	}
+}
+
 #logo {
 	margin: 0.75em 0;
 	margin: 0 auto;
@@ -254,6 +308,25 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+
+
+#menu-footer {
+	&.nav {
+		display: inline-block;
+		li {
+			a {
+				color: $blue;
+				padding: 0;
+				margin: 0 0.75em;
+
+				&:hover {
+					color: darken($blue, 20%);
+					border-bottom: 1px solid $blue;
+				}
+			}
+		}
+	}
+}
 
 .nav {
 	border-bottom: 0;
@@ -1045,21 +1118,7 @@ SIDEBARS & ASIDES
 
 	&:before {
 		content: "\f16d";
-		font-family: "FontAwesome";
-	    background-color: $pink;
-	    border-radius: 34px;
-	    height: 30px;
-	    width: 45px;
-	    margin: 0 auto;
-	    margin-bottom: -30px;
-	    position: relative;
-	    z-index: 99;
-	    text-align: center;
-	    line-height: 180%;
-	    font-size: 1.5em;
-		color: $tan;
-		border: 2px solid $tan;
-		@include drop-shadow;
+		@include icon-pink;
 	}
 	&.sidebar {
 		margin-top: 0;
@@ -1130,6 +1189,7 @@ FOOTER STYLES
 	view.
 	*/
 	.footer-links {
+		text-align: center;
 
 		ul {
 

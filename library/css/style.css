@@ -648,6 +648,9 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+/*************
+ICON STYLE
+**************/
 /******************************************************************
 Site Name:
 Author:
@@ -1422,6 +1425,56 @@ HEADER STYLES
   height: 150px;
   margin-top: 0em; }
 
+#inner-footer #logo {
+  margin: 0.5em 0;
+  background-color: transparent !important;
+  height: 100px;
+  width: 100px;
+  float: left; }
+  #inner-footer #logo a {
+    color: #A3DED2;
+    font-size: 2.5em; }
+#inner-footer .footer_info {
+  float: left;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid #A3DED2;
+  margin-top: 2.5em; }
+  #inner-footer .footer_info a {
+    color: #A3DED2;
+    text-decoration: none; }
+    #inner-footer .footer_info a:hover {
+      color: #7dd1c0;
+      border-bottom: 1px solid #A3DED2; }
+#inner-footer .social {
+  text-align: center;
+  margin: 1.5em 0 1em; }
+  #inner-footer .social p {
+    font-family: "Just Another Hand", cursive;
+    font-size: 2em;
+    display: inline;
+    margin-right: .5em; }
+  #inner-footer .social .fa {
+    margin: 0 .5em;
+    font-family: "FontAwesome";
+    background-color: #A3DED2;
+    border-radius: 34px;
+    height: 45px;
+    width: 45px;
+    z-index: 99;
+    text-align: center;
+    line-height: 180%;
+    font-size: 1.5em;
+    color: #F7F4E2;
+    border: 2px solid #F7F4E2;
+    text-decoration: none;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    #inner-footer .social .fa:hover {
+      background-color: #7dd1c0;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important; }
+
 #logo {
   margin: 0.75em 0;
   margin: 0 auto;
@@ -1471,6 +1524,16 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+#menu-footer.nav {
+  display: inline-block; }
+  #menu-footer.nav li a {
+    color: #A3DED2;
+    padding: 0;
+    margin: 0 0.75em; }
+    #menu-footer.nav li a:hover {
+      color: #58c3ad;
+      border-bottom: 1px solid #A3DED2; }
+
 .nav {
   border-bottom: 0;
   margin: 0;
@@ -1964,6 +2027,9 @@ it simple because you'll have to
 override these styles for the desktop
 view.
 */
+.footer-links {
+  text-align: center; }
+
 /* end .footer-links */
 /*********************
 LARGER MOBILE DEVICES
