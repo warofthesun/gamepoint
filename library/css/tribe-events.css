@@ -694,6 +694,15 @@ and it will create a button dependant on those variables.
   .pink-btn:active, #tribe-events .tribe-events-button:active {
     background-color: #90d7c9; }
 
+.tribe-events-tooltip .entry-title {
+  color: #A3DED2 !important; }
+.tribe-events-tooltip .tribe-event-duration {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 1em; }
+.tribe-events-tooltip .tribe-events-event-body {
+  font-size: 1em; }
+
 .tribe-events-schedule {
   color: #513628;
   font-size: .7em;

@@ -1361,7 +1361,7 @@ a, a:visited {
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
     color: #513628;
-    border-bottom: 1px solid #513628; }
+    border-bottom: 1px solid; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.

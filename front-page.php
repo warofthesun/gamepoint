@@ -4,7 +4,7 @@
 				<div id="inner-content" class="wrap cf">
 						<main id="main" class="m-all t-2of3 d-5of7 padding_remove-right cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							<article>
-								<?php $my_query = new WP_Query('pagename=welcome-to-gamepoint-cafe');
+								<?php $my_query = new WP_Query('pagename=message-block');
 								while ($my_query->have_posts()) : $my_query->the_post();?>
 
 									<h2><?php the_field('title'); ?></h2>
@@ -42,7 +42,7 @@
 												<?php the_content() ?>
 											</div>
 											<div class="m-all">
-												<a href="<?php the_permalink(); ?>" class="pink-btn">Learn More</a>&nbsp;&nbsp;<a href="#" class="pink-btn">See all Events</a>
+												<a href="<?php the_permalink(); ?>" class="pink-btn">Learn More</a>&nbsp;&nbsp;<a href="/events" class="pink-btn">See all Events</a>
 											</div>
 										</div>
 										<?php endwhile; ?>

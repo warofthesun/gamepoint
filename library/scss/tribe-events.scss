@@ -13,6 +13,21 @@
 @import "partials/mixins";
 @import "modules/buttons";
 
+.tribe-events-tooltip {
+    .entry-title {
+        color: $blue !important;
+    }
+
+    .tribe-event-duration {
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+
+    .tribe-events-event-body {
+        font-size: 1em;
+    }
+}
 
 .tribe-events-schedule {
     color: $brown;
