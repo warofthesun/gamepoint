@@ -24,12 +24,7 @@
 								?>
 
 										<h2>Next Event</h2>
-										<div class="m-all t-1of2 d-1of2 cf">
-											<a href="<?php the_permalink(); ?>" class="event_image">
-												<?php if ( has_post_thumbnail() ) the_post_thumbnail('large-square'); ?>
-											</a>
-										</div>
-										<div class="m-all t-1of2 d-1of2 cf">
+										<div class="m-all">
 											<div class="event_title">
 												<h1>
 													<?php the_title('<a href="' . tribe_get_event_link() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a>'); ?>
@@ -38,6 +33,15 @@
 											<div class="event_date">
 												<?php echo tribe_get_start_date(); ?>
 											</div>
+										</div>
+										<div style="clear:both"></div>
+										<div class="m-all t-1of3 d-1of3 cf">
+											<a href="<?php the_permalink(); ?>" class="event_image">
+												<?php if ( has_post_thumbnail() ) the_post_thumbnail('large-square'); ?>
+											</a>
+										</div>
+										<div class="m-all t-2of3 d-2of3 cf">
+
 											<div class="event_content">
 												<?php the_content() ?>
 											</div>
@@ -47,53 +51,6 @@
 										</div>
 										<?php endwhile; ?>
 									</article>
-
-
-
-
-							<div style="clear:both;"></div>
-							<!--START LATEST GAMES-->
-							<article class="latest_games">
-								<h2>Latest Games</h2>
-								<ul>
-								<?php $post_type = 'games';
-									// Get all the taxonomies for this post type
-									$taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
-
-									foreach( $taxonomies as $taxonomy ) :
-
-									    // Gets every "category" (term) in this taxonomy to get the respective posts
-									    $terms = get_terms( $taxonomy );
-
-									    foreach( $terms as $term ) :
-
-									        $args = array(
-									                'post_type' => $post_type,
-									                'posts_per_page' => 1,  //show all posts
-									                'tax_query' => array(
-									                    array(
-									                        'taxonomy' => $taxonomy,
-									                        'field' => 'slug',
-									                        'terms' => $term->slug,
-									                    )
-									                )
-
-									            );
-									        $posts = new WP_Query($args);
-
-
-									        if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
-											<li>
-												<div class="game_category"><?php echo $term->name.'<br />'; ?></div>
-												<div class="game_name"><?php the_title(); ?></div>
-											</li>
-									        <?php endwhile; endif; ?>
-									    <?php endforeach; endforeach; ?>
-								</ul>
-								<div style="clear:both;text-align:center;">
-									<a href="#" class="pink-btn">view game library</a>
-								</div>
-							</article>
 						</main>
 
 					<?php get_sidebar('sidebar-home'); ?>

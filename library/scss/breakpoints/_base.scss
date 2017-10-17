@@ -469,6 +469,8 @@ article {
 
 
 	.event_image {
+		float: left;
+		padding-top: 1em;
 		img {
 			width: 100% !important;
 			height: auto;
@@ -492,7 +494,8 @@ article {
 	.event_date {
 		font-style: italic;
 		padding-bottom: 1em;
-		border-bottom: 1px solid $brown;
+		border-bottom: 1px solid $tan;
+		float: left;
 	}
 
 	.event_content {
@@ -651,7 +654,7 @@ article {
 		/* entry content */
 		.entry-content {
 			padding: 1.5em 1.5em 0;
-			border-top: 1px solid $blue;
+			border-top: 0px solid $blue;
 
 			p {
 				margin: 0 0 1.5em;
