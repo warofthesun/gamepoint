@@ -433,6 +433,20 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+#inner-footer .footer_info-block {
+  width: 440px;
+  margin: 0 auto; }
+#inner-footer #logo {
+  width: 100px;
+  margin-top: 0.5em; }
+#inner-footer .footer_info {
+  float: left;
+  text-align: left;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid #A3DED2;
+  margin-top: 2.5em; }
+
 /*
 you'll probably need to do quite a bit
 of overriding here if you styled them for

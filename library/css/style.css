@@ -1453,12 +1453,16 @@ HEADER STYLES
   height: 150px;
   margin-top: 3em; }
 
+#inner-footer .footer_info-block {
+  width: 440px;
+  margin: 0 auto; }
 #inner-footer #logo {
   margin: 0.5em 0;
   background-color: transparent !important;
   height: 100px;
-  width: 100px;
-  float: left; }
+  width: 100%;
+  float: left;
+  margin-top: 0em; }
   #inner-footer #logo a {
     color: #A3DED2;
     font-size: 2.5em; }
@@ -1466,10 +1470,7 @@ HEADER STYLES
       text-decoration: none;
       border-bottom: 0px; }
 #inner-footer .footer_info {
-  float: left;
-  margin-left: 1em;
-  padding-left: 1em;
-  border-left: 1px solid #A3DED2;
+  text-align: center;
   margin-top: 2.5em; }
   #inner-footer .footer_info a {
     color: #A3DED2;
@@ -1561,13 +1562,16 @@ and more scalable.
 */
 #menu-footer.nav {
   display: inline-block; }
-  #menu-footer.nav li a {
-    color: #A3DED2;
-    padding: 0;
-    margin: 0 0.75em; }
-    #menu-footer.nav li a:hover {
-      color: #58c3ad;
-      border-bottom: 1px solid #A3DED2; }
+  #menu-footer.nav li {
+    display: inline-block; }
+    #menu-footer.nav li a {
+      color: #A3DED2;
+      padding: 0;
+      margin: 0 0.75em;
+      border-top: 0; }
+      #menu-footer.nav li a:hover {
+        color: #58c3ad;
+        border-bottom: 1px solid #A3DED2; }
 
 .nav {
   border-bottom: 0;
@@ -2130,7 +2134,8 @@ override these styles for the desktop
 view.
 */
 .footer-links {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 2em; }
 
 /* end .footer-links */
 /*********************
@@ -2381,6 +2386,20 @@ you can add resource intensive styles.
   /*********************
   FOOTER STYLES
   *********************/
+  #inner-footer .footer_info-block {
+    width: 440px;
+    margin: 0 auto; }
+  #inner-footer #logo {
+    width: 100px;
+    margin-top: 0.5em; }
+  #inner-footer .footer_info {
+    float: left;
+    text-align: left;
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 1px solid #A3DED2;
+    margin-top: 2.5em; }
+
   /*
   you'll probably need to do quite a bit
   of overriding here if you styled them for

@@ -2,16 +2,18 @@
 
 				<div id="inner-footer" class="wrap cf">
 					<div class="m-all t-all d-1of2 cf">
-						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization">
-							<a href="<?php echo home_url(); ?>" class="gp-gamepoint-logo"></a>
-						</p>
-						<div class="footer_info">
-							<?php $my_query = new WP_Query('pagename=site-info');
-							while ($my_query->have_posts()) : $my_query->the_post();?>
-							<div> <?php the_field('phone_number') ?></div>
-							<a href="mailto:<?php the_field('store_email') ?>"> <?php the_field('store_email') ?></a>
-							<div><?php the_field('address'); ?></div>
+						<div class="footer_info-block">
+							<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization">
+								<a href="<?php echo home_url(); ?>" class="gp-gamepoint-logo"></a>
+							</p>
+							<div class="footer_info">
+								<?php $my_query = new WP_Query('pagename=site-info');
+								while ($my_query->have_posts()) : $my_query->the_post();?>
+								<div> <?php the_field('phone_number') ?></div>
+								<a href="mailto:<?php the_field('store_email') ?>"> <?php the_field('store_email') ?></a>
+								<div><?php the_field('address'); ?></div>
 
+							</div>
 						</div>
 					</div>
 					<div class="m-all t-all d-1of2 last-col cf">

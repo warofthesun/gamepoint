@@ -223,12 +223,19 @@ HEADER STYLES
 }
 
 #inner-footer {
+
+	.footer_info-block {
+		width: 440px;
+		margin:0 auto;
+	}
+
 	#logo {
 		margin: 0.5em 0;
 		background-color: transparent !important;
 		height: 100px;
-		width: 100px;
+		width: 100%;
 		float: left;
+		margin-top: 0em;
 
 		a {
 			color: $blue;
@@ -242,10 +249,7 @@ HEADER STYLES
 	}
 
 	.footer_info {
-		float: left;
-		margin-left: 1em;
-		padding-left: 1em;
-		border-left: 1px solid $blue;
+		text-align: center;
 		margin-top:2.5em;
 
 		a {
@@ -363,10 +367,12 @@ and more scalable.
 	&.nav {
 		display: inline-block;
 		li {
+			display: inline-block;
 			a {
 				color: $blue;
 				padding: 0;
 				margin: 0 0.75em;
+				border-top: 0;
 
 				&:hover {
 					color: darken($blue, 20%);
@@ -1335,6 +1341,7 @@ FOOTER STYLES
 	*/
 	.footer-links {
 		text-align: center;
+		margin-bottom: 2em;
 
 		ul {
 
