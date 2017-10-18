@@ -242,6 +242,8 @@ function bones_comments( $comment, $args, $depth ) {
 <?php
 } // don't remove this bracket!
 
+
+
 /*
 This is a modification of a function found in the
 twentythirteen theme where we can declare some

@@ -168,15 +168,49 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
+#header_nav {
+	height: 0;
+	overflow: hidden;
+	background-color: $tan;
+	@include transition(all 0.2s ease-in-out);
+
+	&.show {
+		border-bottom: 2px solid $blue;
+		height: auto;
+	}
+
+
+}
+
 .navigation {
-	margin-top:3em;
+	margin-top:-3em;
+	position: absolute;
+	width: 100%;
+
+
+
+	&:after {
+		content: "\f0c9";
+		width: 100%;
+		text-align: right;
+		font-size: 1.5em;
+		font-family: "FontAwesome";
+		padding-top:.5em;
+		float: right;
+		margin-right: 1em;
+	}
+
 
 	.left {
-		text-align: left;
+		text-align: center;
+	}
+
+	.hide {
+		display: none;
 	}
 
 	.right {
-		text-align: right;
+		text-align: center;
 	}
 }
 
@@ -185,7 +219,7 @@ HEADER STYLES
 	background-image: url('../images/header-pattern@2x.png');
 	background-size: contain;
     height: 150px;
-    margin-top: 0em;
+    margin-top: 3em;
 }
 
 #inner-footer {
@@ -353,9 +387,10 @@ and more scalable.
 			display: block;
 			color: $brown;
 			text-decoration: none;
-			padding:0 0.75em;
 			font-weight: bold;
 			text-transform: uppercase;
+			padding: 1em;
+    		border-top: 1px solid lighten($brown, 60%);
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -415,23 +450,7 @@ and more scalable.
 
 } /* end .nav */
 
-#menu-right-header-menu {
-	float: right;
 
-	li:last-child {
-		a {
-			padding-right: 0;
-		}
-	}
-}
-
-#menu-left-header-menu {
-		li:first-child {
-			a {
-				padding-left: 0;
-			}
-		}
-}
 
 /*********************
 POSTS & CONTENT STYLES
@@ -569,7 +588,7 @@ article {
 	.sidebar{
 		margin-top: 0;
 	}
-	.page-title {
+	.page-title, .archive-title {
 		font-size: 1em;
     	margin-top: -1.5em;
     	margin-bottom: 1.5em;
@@ -651,10 +670,46 @@ article {
 			time {}
 		}
 
+		.blog_page {
+
+			.sidebar {
+				margin-top: 0;
+			}
+
+			.entry-content {
+			padding: 1em;
+			}
+
+			article {
+				margin-bottom: 3em;
+				border-bottom: 1px solid $tan;
+			}
+
+			header {
+				padding: 0;
+				border-bottom: 1px solid $tan;
+			}
+
+			.byline {
+				margin-bottom: .5em;
+			}
+
+			p {
+				margin: .5em 0 ;
+			}
+
+			footer.article-footer {
+				background-color: transparent !important;
+				border-top: 1px;
+			}
+		}
+
 		/* entry content */
 		.entry-content {
 			padding: 1.5em 1.5em 0;
 			border-top: 0px solid $blue;
+
+
 
 			p {
 				margin: 0 0 1.5em;
@@ -1189,6 +1244,10 @@ SIDEBARS & ASIDES
 
 .sidebar {}
 
+	a, a:visited {
+		color: $brown;
+	}
+
 	.widgettitle {
 		font-family: $sans-serif;
 		font-weight: bold;
@@ -1201,6 +1260,23 @@ SIDEBARS & ASIDES
 		padding-top: 3px;
 		border-bottom: 0 !important;
 		margin-bottom: 0 !important;
+	}
+
+	input[type="search"] {
+		width: 90%;
+		background-color: $white;
+		@include drop-shadow;
+
+		&:active {
+			background-color: lighten($tan, 20%);
+		}
+	}
+
+	#searchsubmit {
+		&.pink-btn:hover {
+				box-shadow: 1px 1px 5px #f1ecce !important;
+
+		}
 	}
 
 	.widget {

@@ -696,6 +696,10 @@ and it will create a button dependant on those variables.
 
 .tribe-events-tooltip .entry-title {
   color: #A3DED2 !important; }
+.tribe-events-tooltip .event_subhead {
+  color: #513628;
+  font-size: 1.2em;
+  font-weight: normal; }
 .tribe-events-tooltip .tribe-event-duration {
   font-size: 1.3em;
   font-weight: bold;
@@ -758,9 +762,14 @@ and it will create a button dependant on those variables.
 .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] {
   background-color: #A3DED2; }
 
-.event_excerpt {
+.event_subhead {
   font-size: 1.5em;
   font-weight: 700;
+  color: #A3DED2; }
+
+.event_excerpt {
+  font-size: 1.1em;
+  font-weight: normal;
   color: #513628; }
 
 /*# sourceMappingURL=tribe-events.css.map */

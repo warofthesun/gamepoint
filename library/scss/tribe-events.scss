@@ -18,6 +18,12 @@
         color: $blue !important;
     }
 
+    .event_subhead {
+        color: $brown;
+        font-size: 1.2em;
+        font-weight: normal;
+    }
+
     .tribe-event-duration {
         font-size: 1.3em;
         font-weight: bold;
@@ -106,8 +112,14 @@
     background-color: $blue;
 }
 
-.event_excerpt {
+.event_subhead {
     font-size: 1.5em;
     font-weight: 700;
+    color: $blue;
+}
+
+.event_excerpt {
+    font-size: 1.1em;
+    font-weight: normal;
     color: $brown;
 }

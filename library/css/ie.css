@@ -307,6 +307,38 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
+#header_nav {
+  height: auto;
+  background-color: transparent; }
+
+.navigation {
+  margin-top: 3em;
+  position: relative;
+  border-bottom: 0px; }
+  .navigation:after {
+    display: none; }
+  .navigation .left {
+    text-align: left; }
+  .navigation .hide {
+    display: inline-block !important; }
+  .navigation .right {
+    text-align: right; }
+
+#menu-right-header-menu {
+  float: right; }
+  #menu-right-header-menu li:last-child a {
+    padding-right: 0; }
+
+#menu-left-header-menu li:first-child a {
+  padding-left: 0; }
+
+.header {
+  background-color: none;
+  background-image: url("../images/header-pattern@2x.png");
+  background-size: contain;
+  height: 150px;
+  margin-top: 0em; }
+
 .nav {
   border: 0;
   /* end .menu ul li */
@@ -323,7 +355,8 @@ NAVIGATION STYLES
     */
     /* showing sub-menus */ }
     .nav li a {
-      border-bottom: 0;
+      padding: 0 0.75em;
+      border-top: 0px solid #F7F4E2;
       /*
       you can use hover styles here even though this size
       has the possibility of being a mobile device.

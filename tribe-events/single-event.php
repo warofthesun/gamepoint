@@ -60,8 +60,9 @@ $event_id = get_the_ID();
 			<!-- Event content -->
 			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
 			<div class="tribe-events-single-event-description tribe-events-content events-custom">
-				<div class="event_excerpt">This will be a custom field</div>
-				<?php the_content(); ?>
+
+				<div class="event_subhead"><?php the_field('event_subhead'); ?></div>
+				<div class="event_content"><?php the_content(); ?></div>
 			</div>
 			<!-- .tribe-events-single-event-description -->
 			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>

@@ -110,6 +110,9 @@ function loadGravatars() {
 */
 jQuery(document).ready(function($) {
 
+	$( ".navigation" ).click(function() {
+  $( "#header_nav" ).toggleClass( "show" );
+});
   /*
    * Let's fire off the gravatar function
    * You can remove this if you don't need it

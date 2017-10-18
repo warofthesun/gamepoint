@@ -45,6 +45,57 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
+#header_nav {
+	height: auto;
+	background-color: transparent;
+}
+.navigation {
+	margin-top:3em;
+	position: relative;
+	border-bottom: 0px;
+
+	&:after {
+		display: none;
+	}
+
+	.left {
+		text-align: left;
+	}
+
+	.hide {
+		display: inline-block !important;
+	}
+
+	.right {
+		text-align: right;
+	}
+}
+
+#menu-right-header-menu {
+	float: right;
+
+	li:last-child {
+		a {
+			padding-right: 0;
+		}
+	}
+}
+
+#menu-left-header-menu {
+		li:first-child {
+			a {
+				padding-left: 0;
+			}
+		}
+}
+
+.header {
+	background-color: none;
+	background-image: url('../images/header-pattern@2x.png');
+	background-size: contain;
+    height: 150px;
+    margin-top: 0em;
+}
 
 .nav {
 	border: 0;
@@ -57,7 +108,8 @@ NAVIGATION STYLES
 		position: relative;
 
 		a {
-			border-bottom: 0;
+			padding:0 0.75em;
+    		border-top: 0px solid $tan;
 
 			/*
 			you can use hover styles here even though this size

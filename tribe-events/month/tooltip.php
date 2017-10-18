@@ -11,6 +11,11 @@
 
 <script type="text/html" id="tribe_tmpl_tooltip">
 	<div id="tribe-events-tooltip-[[=eventId]]" class="tribe-events-tooltip">
+		[[ if(imageTooltipSrc.length) { ]]
+		<div class="tribe-events-event-thumb">
+			<img src="[[=imageTooltipSrc]]" alt="[[=title]]" />
+		</div>
+		[[ } ]]
 		<h4 class="entry-title summary">[[=raw title]]</h4>
 
 		<div class="tribe-events-event-body">
@@ -18,11 +23,8 @@
 			<div class="tribe-event-duration">
 				<abbr class="tribe-events-abbr tribe-event-date-start">[[=dateDisplay]] </abbr>
 			</div>
-			[[ if(imageTooltipSrc.length) { ]]
-			<div class="tribe-events-event-thumb">
-				<img src="[[=imageTooltipSrc]]" alt="[[=title]]" />
-			</div>
-			[[ } ]]
+
+			<div class="event_subhead"><?php the_field('event_subhead'); ?></div>
 			[[ if(excerpt.length) { ]]
 			<div class="tribe-event-description">[[=raw excerpt]]</div>
 			[[ } ]]

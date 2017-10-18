@@ -3,7 +3,7 @@
  Template Name: Events Page
 */
 ?>
-<!--page-custom-->
+<!--page-events-->
 <?php get_header(); ?>
 
 			<div id="content">
@@ -33,15 +33,6 @@
 										the_content();
 									?>
 								</section>
-
-
-								<footer class="article-footer">
-
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer>
-
-								<?php comments_template(); ?>
 
 							</article>
 

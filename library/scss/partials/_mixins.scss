@@ -74,6 +74,10 @@ probably best not to use it. I mean, were you going to anyway? */
     #{$type}-shadow: 1px 1px 5px darken($color, 5%);
 }
 
+@mixin drop-shadow-remove($type:box) {
+    #{$type}-shadow: 0px 0px 0px transparent;
+}
+
 @mixin drop-shadow-hover($details: 0px 0px 1px rgba(0,0,0,0.2)){
     box-shadow: $details !important;
     text-shadow: $details !important;
