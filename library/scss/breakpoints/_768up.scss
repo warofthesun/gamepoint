@@ -89,12 +89,29 @@ NAVIGATION STYLES
 		}
 }
 
+#inner-content {
+	border-top: 1px solid $brown;
+}
+
 .header {
 	background-color: none;
 	background-image: url('../images/header-pattern@2x.png');
 	background-size: contain;
     height: 150px;
     margin-top: 0em;
+}
+.header_info {
+
+	.store_hours {
+		text-align: left;
+		margin-top: -1.5em;
+
+		
+	}
+
+	.address {
+		text-align: right;
+	}
 }
 
 .nav {

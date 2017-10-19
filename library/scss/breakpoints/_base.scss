@@ -313,9 +313,8 @@ HEADER STYLES
 	color: $brown;
 
 	.store_hours {
-		text-align: left;
+		text-align: center;
 		font-size: 1.1em;
-		margin-top: -1.5em;
 
 		i {
 			color: $blue;
@@ -345,7 +344,7 @@ HEADER STYLES
 	}
 
 	.address {
-		text-align: right;
+		text-align: center;
 		font-weight: 500;
 	}
 }
@@ -479,12 +478,19 @@ article {
 }
 
 #inner-content {
-	border-top: 1px solid $brown;
+
     padding-top: 30px;
 }
 
 .padding_remove-right {
 	padding-right: 0px;
+}
+
+.full_image {
+	img {
+		width: 98%;
+		height: auto;
+	}
 }
 
 .homepage_event {

@@ -1528,9 +1528,8 @@ HEADER STYLES
 .header_info {
   color: #513628; }
   .header_info .store_hours {
-    text-align: left;
-    font-size: 1.1em;
-    margin-top: -1.5em; }
+    text-align: center;
+    font-size: 1.1em; }
     .header_info .store_hours i {
       color: #A3DED2;
       text-transform: uppercase;
@@ -1547,7 +1546,7 @@ HEADER STYLES
       .header_info .store_hours ul li {
         display: inline-block; }
   .header_info .address {
-    text-align: right;
+    text-align: center;
     font-weight: 500; }
 
 /*********************
@@ -1621,11 +1620,14 @@ article {
   margin-top: 5em; }
 
 #inner-content {
-  border-top: 1px solid #513628;
   padding-top: 30px; }
 
 .padding_remove-right {
   padding-right: 0px; }
+
+.full_image img {
+  width: 98%;
+  height: auto; }
 
 .homepage_event {
   color: #513628;
@@ -2285,12 +2287,21 @@ you can add resource intensive styles.
   #menu-left-header-menu li:first-child a {
     padding-left: 0; }
 
+  #inner-content {
+    border-top: 1px solid #513628; }
+
   .header {
     background-color: none;
     background-image: url("../images/header-pattern@2x.png");
     background-size: contain;
     height: 150px;
     margin-top: 0em; }
+
+  .header_info .store_hours {
+    text-align: left;
+    margin-top: -1.5em; }
+  .header_info .address {
+    text-align: right; }
 
   .nav {
     border: 0;
