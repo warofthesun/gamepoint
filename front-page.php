@@ -3,22 +3,22 @@
 			<div id="content">
 				<div id="inner-content" class="wrap cf">
 						<main id="main" class="m-all t-2of3 d-5of7 padding_remove-right cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-							<article>
+
 								<?php $loop = new WP_Query('pagename=message-block');
 								while ($loop->have_posts()) : $loop->the_post();?>
-
+								<article style="margin-bottom:1em;">
 									<h2><?php the_field('title'); ?></h2>
 									<?php the_content() ?>
-
+								</article>
 								<?php endwhile; ?>
-							</article>
+
 							<article class="homepage_event">
 
 
 								<?php $loop = new WP_Query( 'posts_per_page=1' ); ?>
 
 								<?php while ($loop -> have_posts()) : $loop -> the_post(); ?>
-									<h2>News</h2>
+
 									<div class="m-all">
 										<div class="event_title">
 											<h1>

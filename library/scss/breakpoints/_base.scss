@@ -20,8 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: #fffffe;
-	/*background-color: lighten($tan, 5%);*/
+	background-color: lighten($tan, 5%);
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -531,7 +530,7 @@ article {
 	}
 
 	.event_content {
-		padding: 1em 0;
+		padding: 1em 1em 0 0;
 	}
 }
 
