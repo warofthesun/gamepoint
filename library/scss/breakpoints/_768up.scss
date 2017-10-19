@@ -48,6 +48,11 @@ NAVIGATION STYLES
 #header_nav {
 	height: auto;
 	background-color: transparent;
+
+	&.show {
+		border-bottom: 0px solid $blue;
+		height: auto;
+	}
 }
 .navigation {
 	margin-top:3em;
@@ -106,11 +111,19 @@ NAVIGATION STYLES
 		text-align: left;
 		margin-top: -1.5em;
 
-		
+
 	}
 
 	.address {
 		text-align: right;
+	}
+}
+
+a {
+	&.image {
+		&:hover {
+			border-bottom: 0px;
+		}
 	}
 }
 
@@ -135,6 +148,7 @@ NAVIGATION STYLES
 			&:hover, &:focus {
 				color: lighten($brown, 30%);
 				text-decoration: none;
+				border-bottom: 0px;
 			}
 		}
 

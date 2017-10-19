@@ -36,7 +36,7 @@
 									</div>
 									<div style="clear:both"></div>
 									<div class="m-all t-all d-all cf">
-										<a href="<?php the_permalink(); ?>" class="full_image">
+										<a href="<?php the_permalink(); ?>" class="full_image image">
 											<?php if ( has_post_thumbnail() ) the_post_thumbnail('large'); ?>
 										</a>
 									</div>
@@ -79,7 +79,7 @@
 										</div>
 										<div style="clear:both"></div>
 										<div class="m-all t-1of3 d-1of3 cf">
-											<a href="<?php the_permalink(); ?>" class="event_image">
+											<a href="<?php the_permalink(); ?>" class="event_image image">
 												<?php if ( has_post_thumbnail() ) the_post_thumbnail('large-square'); ?>
 											</a>
 										</div>

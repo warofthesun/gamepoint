@@ -978,11 +978,12 @@ and it will create a button dependant on those variables.
 */
 .pink-btn, .comment-reply-link, #submit, #tribe-events .tribe-events-button {
   background-color: #F7ACB8;
-  text-shadow: 1px 1px 5px #f595a4; }
+  text-shadow: 1px 1px 5px #f595a4;
+  margin-bottom: 1em; }
   .pink-btn:hover, .comment-reply-link:hover, #submit:hover, .pink-btn:focus, .comment-reply-link:focus, #submit:focus, #tribe-events .tribe-events-button:hover, #tribe-events .tribe-events-button:focus {
     background-color: #f599a8; }
   .pink-btn:active, .comment-reply-link:active, #submit:active, #tribe-events .tribe-events-button:active {
-    background-color: #90d7c9; }
+    background-color: #f490a0; }
 
 /******************************************************************
 Site Name:
@@ -2265,6 +2266,9 @@ you can add resource intensive styles.
   #header_nav {
     height: auto;
     background-color: transparent; }
+    #header_nav.show {
+      border-bottom: 0px solid #A3DED2;
+      height: auto; }
 
   .navigation {
     margin-top: 3em;
@@ -2303,6 +2307,9 @@ you can add resource intensive styles.
   .header_info .address {
     text-align: right; }
 
+  a.image:hover {
+    border-bottom: 0px; }
+
   .nav {
     border: 0;
     /* end .menu ul li */
@@ -2327,7 +2334,8 @@ you can add resource intensive styles.
         */ }
         .nav li a:hover, .nav li a:focus {
           color: #b17c61;
-          text-decoration: none; }
+          text-decoration: none;
+          border-bottom: 0px; }
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;

@@ -688,11 +688,12 @@ and it will create a button dependant on those variables.
 */
 .pink-btn, #tribe-events .tribe-events-button {
   background-color: #F7ACB8;
-  text-shadow: 1px 1px 5px #f595a4; }
+  text-shadow: 1px 1px 5px #f595a4;
+  margin-bottom: 1em; }
   .pink-btn:hover, .pink-btn:focus, #tribe-events .tribe-events-button:hover, #tribe-events .tribe-events-button:focus {
     background-color: #f599a8; }
   .pink-btn:active, #tribe-events .tribe-events-button:active {
-    background-color: #90d7c9; }
+    background-color: #f490a0; }
 
 .tribe-events-tooltip .entry-title {
   color: #A3DED2 !important; }

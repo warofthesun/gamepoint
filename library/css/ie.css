@@ -310,6 +310,9 @@ NAVIGATION STYLES
 #header_nav {
   height: auto;
   background-color: transparent; }
+  #header_nav.show {
+    border-bottom: 0px solid #A3DED2;
+    height: auto; }
 
 .navigation {
   margin-top: 3em;
@@ -348,6 +351,9 @@ NAVIGATION STYLES
 .header_info .address {
   text-align: right; }
 
+a.image:hover {
+  border-bottom: 0px; }
+
 .nav {
   border: 0;
   /* end .menu ul li */
@@ -372,7 +378,8 @@ NAVIGATION STYLES
       */ }
       .nav li a:hover, .nav li a:focus {
         color: #b17c61;
-        text-decoration: none; }
+        text-decoration: none;
+        border-bottom: 0px; }
     .nav li ul.sub-menu,
     .nav li ul.children {
       margin-top: 0;
