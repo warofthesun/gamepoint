@@ -372,6 +372,7 @@ a.image:hover {
     .nav li a {
       padding: 0 0.75em;
       border-top: 0px solid #F7F4E2;
+      color: #513628;
       /*
       you can use hover styles here even though this size
       has the possibility of being a mobile device.

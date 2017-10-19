@@ -20,7 +20,8 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: lighten($tan, 5%);
+	background-color: #fffffe;
+	/*background-color: lighten($tan, 5%);*/
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -171,11 +172,11 @@ HEADER STYLES
 #header_nav {
 	height: 0;
 	overflow: hidden;
-	background-color: $tan;
-	@include transition(all 0.2s ease-in-out);
+	background-color: $blue;
+	@include transition(all 0.6s ease-in-out);
 
 	&.show {
-		border-bottom: 2px solid $blue;
+
 		height: auto;
 	}
 
@@ -390,12 +391,12 @@ and more scalable.
 
 		a {
 			display: block;
-			color: $brown;
+			color: $white;
 			text-decoration: none;
 			font-weight: bold;
 			text-transform: uppercase;
 			padding: 1em;
-    		border-top: 1px solid lighten($brown, 60%);
+    		border-top: 1px solid lighten($blue, 10%);
 
 			/*
 			remember this is for mobile ONLY, so there's no need

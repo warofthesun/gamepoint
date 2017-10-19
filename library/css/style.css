@@ -1300,7 +1300,8 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #513628;
-  background-color: #fdfcf6;
+  background-color: #fffffe;
+  /*background-color: lighten($tan, 5%);*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1420,11 +1421,10 @@ HEADER STYLES
 #header_nav {
   height: 0;
   overflow: hidden;
-  background-color: #F7F4E2;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  background-color: #A3DED2;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out; }
   #header_nav.show {
-    border-bottom: 2px solid #A3DED2;
     height: auto; }
 
 .navigation {
@@ -1589,12 +1589,12 @@ and more scalable.
     */ }
     .nav li a {
       display: block;
-      color: #513628;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       text-transform: uppercase;
       padding: 1em;
-      border-top: 1px solid #e4d1c7;
+      border-top: 1px solid #c9ebe4;
       /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
@@ -2328,6 +2328,7 @@ you can add resource intensive styles.
       .nav li a {
         padding: 0 0.75em;
         border-top: 0px solid #F7F4E2;
+        color: #513628;
         /*
         you can use hover styles here even though this size
         has the possibility of being a mobile device.
