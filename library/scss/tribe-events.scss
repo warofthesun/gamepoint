@@ -90,6 +90,14 @@
     }
 }
 
+.tribe-list-widget {
+    background-color: white;
+    margin-top: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include drop-shadow;
+}
+
 #tribe-bar-form .tribe-bar-filters {
     display: none !important;
 }

@@ -746,6 +746,13 @@ and it will create a button dependant on those variables.
     text-align: center;
     border-bottom: 1px solid #513628; }
 
+.tribe-list-widget {
+  background-color: white;
+  margin-top: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 1px 1px 5px #f1ecce; }
+
 #tribe-bar-form .tribe-bar-filters {
   display: none !important; }
 
