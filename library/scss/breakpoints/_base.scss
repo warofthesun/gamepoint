@@ -474,7 +474,7 @@ article {
 }
 
 #content {
-	margin-top: 5em;
+	margin-top: 6.5em;
 }
 
 #inner-content {
@@ -519,7 +519,6 @@ article {
 			}
 		}
 
-
 	}
 
 	.event_date {
@@ -531,6 +530,20 @@ article {
 
 	.event_content {
 		padding: 1em 1em 0 0;
+	}
+
+	.event_disclaimer {
+		background-color: $tan;
+		width: 98%;
+		text-align: center;
+		@include drop-shadow;
+
+		span {
+			margin: 1em;
+			padding: 1em;
+			display: block;
+			font-style: italic;
+		}
 	}
 }
 
@@ -750,7 +763,7 @@ article {
 
 			table {
 				width: 100%;
-				border: 1px solid $gray;
+				border: 0px solid $gray;
 				margin-bottom: 1.5em;
 
 				caption {

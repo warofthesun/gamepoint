@@ -25,14 +25,7 @@
 												<?php the_title('<a href="' . tribe_get_event_link() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a>'); ?>
 											</h1>
 										</div >
-										<div class="event_date">
-												<?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
-												/* the time the post was published */
-												'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-												/* the author of the post */
-												'<span class="by">'.__( 'by', 'bonestheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-												); ?>
-										</div>
+
 									</div>
 									<div style="clear:both"></div>
 									<div class="m-all t-all d-all cf">
@@ -93,6 +86,12 @@
 											</div>
 										</div>
 										<?php endwhile; ?>
+										<div style="clear:both;"></div>
+										<?php $my_query = new WP_Query('pagename=site-info'); while ($my_query->have_posts()) : $my_query->the_post();?>
+										<?php if( have_rows('event_disclaimer') ): 	while ( have_rows('event_disclaimer') ) : the_row(); ?>
+
+											<div class="event_disclaimer"><span><?php the_sub_field('event_disclaimer') ?></span></div>
+										<?php endwhile; endif; endwhile; ?>
 									</article>
 						</main>
 

@@ -23,6 +23,7 @@
         font-size: 1.2em;
         font-weight: normal;
     }
+    
 
     .tribe-event-duration {
         font-size: 1.3em;
@@ -86,6 +87,15 @@
             font-weight: 900;
             text-align: center;
             border-bottom: 1px solid $brown;
+        }
+    }
+}
+
+.tribe-events-tickets-rsvp, .tribe-events-tickets {
+    background: $tan !important;
+    .entry-content {
+        table {
+            border: 0px;
         }
     }
 }

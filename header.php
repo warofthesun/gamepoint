@@ -94,7 +94,7 @@
 				<div class="wrap cf header_info">
 					<?php $my_query = new WP_Query('pagename=site-info');
 					while ($my_query->have_posts()) : $my_query->the_post();?>
-					<div class="m-all t-1of2 d-1of2 cf">
+					<div class="m-all t-all d-all cf">
 						<div class="store_hours">
 							<i>Hours</i>
 							<ul>
@@ -114,7 +114,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="m-all t-1of2 d-1of2 last-col cf">
+					<div class="m-all t-all d-all cf">
 						<div class="address"><?php the_field('address'); ?></div>
 					</div>
 					<?php endwhile; ?>
