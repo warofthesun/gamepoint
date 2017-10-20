@@ -165,10 +165,10 @@ hr {
 */
 
 p {
-  -webkit-hyphens: auto;
-  -epub-hyphens:   auto;
-  -moz-hyphens:    auto;
-  hyphens:         auto;
+  -webkit-hyphens: manual;
+  -epub-hyphens:   manual;
+  -moz-hyphens:    manual;
+  hyphens:         manual;
 
 }
 

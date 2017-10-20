@@ -428,10 +428,10 @@ body#tinymce.wp-editor {
     box-sizing: content-box;
     height: 0; }
   body#tinymce.wp-editor p {
-    -webkit-hyphens: auto;
-    -epub-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto; }
+    -webkit-hyphens: manual;
+    -epub-hyphens: manual;
+    -moz-hyphens: manual;
+    hyphens: manual; }
   body#tinymce.wp-editor pre {
     margin: 0; }
   body#tinymce.wp-editor code,
