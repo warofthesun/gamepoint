@@ -1313,7 +1313,7 @@ SIDEBARS & ASIDES
 		margin-bottom: 0 !important;
 	}
 
-	input[type="search"] {
+	input[type="search"], input[type="text"], input[type="email"] {
 		width: 90%;
 		background-color: $white;
 		@include drop-shadow;
@@ -1321,6 +1321,10 @@ SIDEBARS & ASIDES
 		&:active {
 			background-color: lighten($tan, 20%);
 		}
+	}
+
+	input[type="text"], input[type="email"] {
+		width: 100%;
 	}
 
 	#searchsubmit {

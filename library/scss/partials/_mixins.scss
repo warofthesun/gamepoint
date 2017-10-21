@@ -81,7 +81,7 @@ probably best not to use it. I mean, were you going to anyway? */
 @mixin drop-shadow-hover($details: 0px 0px 1px rgba(0,0,0,0.2)){
     box-shadow: $details !important;
     text-shadow: $details !important;
-    border-bottom: 0px !important;
+    /* border-bottom: 0px !important; */
 }
 
 /*************
