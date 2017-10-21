@@ -92,17 +92,18 @@ ICON STYLE
     font-family: "FontAwesome";
     background-color: $pink;
     border-radius: 34px;
-    height: 30px;
+    height: 45px;
     width: 45px;
     margin: 0 auto;
     margin-bottom: -30px;
     position: relative;
     z-index: 99;
     text-align: center;
-    line-height: 180%;
+    line-height: 195%;
     font-size: 1.5em;
     color: $tan;
     border: 2px solid $tan;
+    display: block;
 }
 
 @mixin icon-blue(){

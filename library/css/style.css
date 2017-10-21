@@ -2074,24 +2074,26 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-#sidebar-home:before {
+.instagram_feed:before {
   content: "\f16d";
   font-family: "FontAwesome";
   background-color: #F7ACB8;
   border-radius: 34px;
-  height: 30px;
+  height: 45px;
   width: 45px;
   margin: 0 auto;
   margin-bottom: -30px;
   position: relative;
   z-index: 99;
   text-align: center;
-  line-height: 180%;
+  line-height: 195%;
   font-size: 1.5em;
   color: #F7F4E2;
   border: 2px solid #F7F4E2;
+  display: block;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   text-shadow: 1px 1px 5px #f595a4; }
+
 #sidebar-home.sidebar {
   margin-top: 0;
   border-left: 0px solid #513628; }
