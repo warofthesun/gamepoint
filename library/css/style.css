@@ -1784,6 +1784,15 @@ article {
   background-color: transparent !important;
   border-top: 1px; }
 
+.footer-category {
+  text-transform: uppercase;
+  font-weight: 700;
+  border-top: 1px solid #F7F4E2;
+  padding-top: 1em; }
+  .footer-category a {
+    color: #513628;
+    font-weight: 700; }
+
 /* entry content */
 .entry-content {
   padding: 1.5em 1.5em 0;

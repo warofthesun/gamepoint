@@ -729,6 +729,18 @@ article {
 			}
 		}
 
+		.footer-category {
+			text-transform: uppercase;
+			font-weight: 700;
+			border-top: 1px solid $tan;
+			padding-top: 1em;
+
+			a {
+				color: $brown;
+				font-weight: 700;
+			}
+		}
+
 		/* entry content */
 		.entry-content {
 			padding: 1.5em 1.5em 0;

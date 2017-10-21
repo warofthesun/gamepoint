@@ -19,7 +19,7 @@
 										<header class="article-header">
 
 											<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-											
+
 
 										</header>
 										<?php the_excerpt(); ?>
@@ -30,7 +30,7 @@
 
 
 
-                 	<?php printf( '<p class="footer-category">' . __('filed under', 'bonestheme' ) . ': %1$s</p>' , get_the_category_list(', ') ); ?>
+                 	<?php printf( '<p class="footer-category">' . __('', 'bonestheme' ) . ' %1$s</p>' , get_the_category_list(', ') ); ?>
 
                   <?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 
