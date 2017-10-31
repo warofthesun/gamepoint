@@ -301,6 +301,13 @@ LAYOUT & GRID STYLES
   float: left;
   width: 33%; }
 
+.homepage_event .event_image {
+  width: 35%;
+  padding-top: 0; }
+  .homepage_event .event_image img {
+    padding-top: 0;
+    padding-right: 1em; }
+
 /*********************
 HEADER STYLES
 *********************/

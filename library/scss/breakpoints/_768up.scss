@@ -34,6 +34,18 @@ LAYOUT & GRID STYLES
 	}
 }
 
+.homepage_event {
+	.event_image {
+		width: 35%;
+		padding-top: 0;
+
+		img {
+			padding-top: 0;
+			padding-right: 1em;
+		}
+	}
+}
+
 /*********************
 HEADER STYLES
 *********************/
