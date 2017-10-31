@@ -12,7 +12,7 @@
 								</article>
 								<?php endwhile; ?>
 
-							<article class="homepage_event">
+							<article class="homepage_post">
 
 
 								<?php $loop = new WP_Query( 'posts_per_page=1' ); ?>

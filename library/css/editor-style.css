@@ -682,8 +682,7 @@ body#tinymce.wp-editor {
     margin-bottom: 1.5em; }
   body#tinymce.wp-editor img {
     margin: 0 0 1.5em 0;
-    max-width: 100%;
-    height: auto; }
+    max-width: 100%; }
   body#tinymce.wp-editor .size-auto,
   body#tinymce.wp-editor .size-full,
   body#tinymce.wp-editor .size-large,

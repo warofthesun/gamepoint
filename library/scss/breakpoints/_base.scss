@@ -79,6 +79,30 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 
+.entry-content {
+	p {
+		a {
+			border-bottom: 1px solid;
+
+			&.read_more {
+				border-bottom: 0px;
+			}
+
+			&:hover {
+				border-bottom: 0px;
+			}
+		}
+
+
+	}
+}
+
+h2, .h2, h1, .h1 {
+	a, a:hover {
+		border-bottom: 0px;
+	}
+}
+
 a, a:visited {
 	color: $link-color;
 	text-decoration: none;
@@ -493,7 +517,8 @@ article {
 	}
 }
 
-.homepage_event {
+
+.homepage_event, .homepage_post {
 	color: $brown;
 	float: left;
 	padding-bottom: 3em;
@@ -544,6 +569,12 @@ article {
 			display: block;
 			font-style: italic;
 		}
+	}
+}
+
+.homepage_event {
+	.event_content {
+		padding-top: 0;
 	}
 }
 
