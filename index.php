@@ -14,15 +14,16 @@
 
 
 								<section class="entry-content  cf">
-									<div class="m-all t-1of3 d-1of3 cf"><?php the_post_thumbnail('large-square'); ?></div>
-									<div class="m-all t-2of3 d-2of3 last-col cf">
+
+									<div class="m-all t-all d-all cf">
 										<header class="article-header">
 
 											<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
 
 										</header>
-										<?php the_excerpt(); ?>
+										<div class="excerpt_image"><?php the_post_thumbnail('large-square'); ?></div>
+										<div class="excerpt"><?php the_excerpt(); ?></div>
 									</div>
 								</section>
 

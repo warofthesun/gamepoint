@@ -78,7 +78,7 @@
 												<a href="<?php the_permalink(); ?>" class="event_image image">
 													<?php if ( has_post_thumbnail() ) the_post_thumbnail('large-square'); ?>
 												</a>
-												<?php the_content() ?>
+												<div><?php the_content() ?></div>
 											</div>
 											<div class="m-all">
 												<a href="<?php the_permalink(); ?>" class="pink-btn">Learn More</a>&nbsp;&nbsp;<a href="/events" class="pink-btn">See all Events</a>

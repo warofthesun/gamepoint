@@ -247,7 +247,7 @@ Allow HTML in excerpts
 */
 function wpse_allowedtags() {
     // Add custom tags to this string
-        return '<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>';
+        return '<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<strong>';
     }
 
 if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) :

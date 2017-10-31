@@ -308,6 +308,15 @@ LAYOUT & GRID STYLES
     padding-top: 0;
     padding-right: 1em; }
 
+.excerpt_image {
+  float: left;
+  width: 35%; }
+  .excerpt_image img {
+    padding: 1em 1em 0 0; }
+
+.excerpt {
+  padding-top: 1em; }
+
 /*********************
 HEADER STYLES
 *********************/
