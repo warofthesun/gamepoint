@@ -36,7 +36,7 @@
 									<div class="m-all t-all d-all cf">
 
 										<div class="event_content">
-											<?php the_excerpt() ?>
+											<?php the_content("Read More &nbsp;&raquo;") ?>
 										</div>
 
 									</div>

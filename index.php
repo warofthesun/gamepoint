@@ -23,7 +23,7 @@
 
 										</header>
 										<div class="excerpt_image"><?php the_post_thumbnail('large-square'); ?></div>
-										<div class="excerpt"><?php the_excerpt(); ?></div>
+										<div class="excerpt"><?php the_content("Read More &nbsp;&raquo;"); ?></div>
 									</div>
 								</section>
 

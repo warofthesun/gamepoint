@@ -103,6 +103,8 @@ h2, .h2, h1, .h1 {
 	}
 }
 
+
+
 a, a:visited {
 	color: $link-color;
 	text-decoration: none;
@@ -112,6 +114,14 @@ a, a:visited {
 	&:hover, &:focus {
 		color: $link-hover;
 		border-bottom: 1px solid;
+	}
+
+	&.more-link {
+		border-bottom: 0px !important;
+
+		&:hover {
+			border-bottom: 1px !important;
+		}
 	}
 
 	/* on click */

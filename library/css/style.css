@@ -1373,6 +1373,10 @@ a, a:visited {
   a:hover, a:focus, a:visited:hover, a:visited:focus {
     color: #513628;
     border-bottom: 1px solid; }
+  a.more-link, a:visited.more-link {
+    border-bottom: 0px !important; }
+    a.more-link:hover, a:visited.more-link:hover {
+      border-bottom: 1px !important; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
