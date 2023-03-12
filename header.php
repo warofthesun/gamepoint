@@ -92,8 +92,6 @@
 
 				</div>
 				<div class="wrap cf header_info">
-					<?php $my_query = new WP_Query('pagename=site-info');
-					while ($my_query->have_posts()) : $my_query->the_post();?>
 					<div class="m-all t-all d-all cf">
 						<div class="store_hours">
 							<i>Hours</i>
@@ -101,9 +99,9 @@
 							<?php
 							// check if the repeater field has rows of data
 
-							if( have_rows('store_hours') ):
+							if( have_rows('store_hours', 'option') ):
 							// loop through the rows of data
-								while ( have_rows('store_hours') ) : the_row();
+								while ( have_rows('store_hours', 'option') ) : the_row();
 								// display a sub field value
 								?>
 								<li>
@@ -115,8 +113,7 @@
 						</div>
 					</div>
 					<div class="m-all t-all d-all cf">
-						<div class="address"><?php the_field('address'); ?></div>
+						<div class="address"><?php the_field('address', 'option'); ?></div>
 					</div>
-					<?php endwhile; ?>
 				</div>
 			</header>

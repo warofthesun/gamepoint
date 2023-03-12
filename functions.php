@@ -364,6 +364,12 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 function add_fontawesome(){
 	wp_enqueue_style('font-awesome', '//use.fontawesome.com/ed8b695723.css');
 }
-add_action('wp_enqueue_scripts','add_fontawesome')
+add_action('wp_enqueue_scripts','add_fontawesome');
+
+acf_add_options_page(array(
+        'page_title'    => 'Site Info',
+        'menu_title'    => 'Site Info',
+        'menu_slug'     => 'site-info',
+    ));
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

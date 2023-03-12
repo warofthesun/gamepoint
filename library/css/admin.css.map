@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA;;;;;;;;;;;mEAWmE",
-"sources": ["../scss/admin.scss"],
-"names": [],
-"file": "admin.css"
-}
+{"version":3,"sourceRoot":"","sources":["../scss/admin.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA","file":"admin.css"}

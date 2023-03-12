@@ -60,7 +60,8 @@ http://alistapart.com/column/responsive-typography-is-a-physical-discipline
   src: url("../fonts/gamepoint.eot");
   src: url("../fonts/gamepoint.eot?#iefix") format("embedded-opentype"), url("../fonts/gamepoint.woff") format("woff"), url("../fonts/gamepoint.ttf") format("truetype"), url("../fonts/gamepoint.svg#gamepoint") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 [data-icon]:before {
   font-family: "gamepoint" !important;
   content: attr(data-icon);
@@ -71,9 +72,10 @@ http://alistapart.com/column/responsive-typography-is-a-physical-discipline
   speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
-[class^="gp-"]:before,
+[class^=gp-]:before,
 [class*=" gp-"]:before {
   font-family: "gamepoint" !important;
   font-style: normal !important;
@@ -83,10 +85,12 @@ http://alistapart.com/column/responsive-typography-is-a-physical-discipline
   speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .gp-gamepoint-logo:before {
-  content: "\61"; }
+  content: "a";
+}
 
 /*********************
 FONT FACE (IN YOUR FACE)
@@ -138,7 +142,8 @@ p {
   -moz-font-feature-settings: "liga=1, dlig=1";
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig"; }
+  font-feature-settings: "liga", "dlig";
+}
 
 /******************************************************************
 Site Name:
@@ -226,45 +231,53 @@ NAVIGATION STYLES
 *********************/
 /* .menu is clearfixed inside mixins.scss */
 .menu {
-  /* end .menu ul */ }
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .menu ul li {
-      /*
-      plan your menus and drop-downs wisely.
-      */ }
-      .menu ul li a {
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
-
+  /* end .menu ul */
+}
+.menu ul {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.menu ul li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+}
+.menu ul li a {
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
 /* end .menu */
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 .game_list li {
   float: left;
-  width: 50%; }
+  width: 50%;
+}
 
 /* entry content */
 .entry-content {
-  /* at this larger size, we can start to align images */ }
-  .entry-content .alignleft, .entry-content img.alignleft {
-    margin-right: 1.5em;
-    display: inline;
-    float: left; }
-  .entry-content .alignright, .entry-content img.alignright {
-    margin-left: 1.5em;
-    display: inline;
-    float: right; }
-  .entry-content .aligncenter, .entry-content img.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    clear: both; }
+  /* at this larger size, we can start to align images */
+}
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
 
 /* end .entry-content */
 /*********************
@@ -295,27 +308,34 @@ GENERAL STYLES
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 760px; }
+  width: 760px;
+}
 
 .game_list li {
   float: left;
-  width: 33%; }
+  width: 33%;
+}
 
 .homepage_event .event_image {
   width: 35%;
-  padding-top: 0; }
-  .homepage_event .event_image img {
-    padding-top: 0;
-    padding-right: 1em; }
+  padding-top: 0;
+}
+.homepage_event .event_image img {
+  padding-top: 0;
+  padding-right: 1em;
+}
 
 .excerpt_image {
   float: left;
-  width: 35%; }
-  .excerpt_image img {
-    padding: 1em 1em 0 0; }
+  width: 35%;
+}
+.excerpt_image img {
+  padding: 1em 1em 0 0;
+}
 
 .excerpt {
-  padding-top: 1em; }
+  padding-top: 1em;
+}
 
 /*********************
 HEADER STYLES
@@ -325,131 +345,161 @@ NAVIGATION STYLES
 *********************/
 #header_nav {
   height: auto;
-  background-color: transparent; }
-  #header_nav.show {
-    border-bottom: 0px solid #A3DED2;
-    height: auto; }
+  background-color: transparent;
+}
+#header_nav.show {
+  border-bottom: 0px solid #A3DED2;
+  height: auto;
+}
 
 .navigation {
   margin-top: 3em;
   position: relative;
-  border-bottom: 0px; }
-  .navigation:after {
-    display: none; }
-  .navigation .left {
-    text-align: left; }
-  .navigation .hide {
-    display: inline-block !important; }
-  .navigation .right {
-    text-align: right; }
+  border-bottom: 0px;
+}
+.navigation:after {
+  display: none;
+}
+.navigation .left {
+  text-align: left;
+}
+.navigation .hide {
+  display: inline-block !important;
+}
+.navigation .right {
+  text-align: right;
+}
 
 #menu-right-header-menu {
-  float: right; }
-  #menu-right-header-menu li:last-child a {
-    padding-right: 0; }
+  float: right;
+}
+#menu-right-header-menu li:last-child a {
+  padding-right: 0;
+}
 
 #menu-left-header-menu li:first-child a {
-  padding-left: 0; }
+  padding-left: 0;
+}
 
 #inner-content {
-  border-top: 1px solid #513628; }
+  border-top: 1px solid #513628;
+}
 
 .header {
   background-color: none;
   background-image: url("../images/header-pattern@2x.png");
   background-size: contain;
   height: 150px;
-  margin-top: 0em; }
+  margin-top: 0em;
+}
 
 .header_info .store_hours {
-  text-align: left; }
+  text-align: left;
+}
 .header_info .address {
-  text-align: right; }
+  text-align: right;
+}
 
 a.image:hover {
-  border-bottom: 0px; }
+  border-bottom: 0px;
+}
 
 .nav {
   border: 0;
   /* end .menu ul li */
   /* highlight current page */
-  /* end current highlighters */ }
-  .nav ul {
-    background: #000;
-    margin-top: 0; }
-  .nav li {
-    float: left;
-    position: relative;
-    /*
-    plan your menus and drop-downs wisely.
-    */
-    /* showing sub-menus */ }
-    .nav li a {
-      padding: 0 0.75em;
-      border-top: 0px solid #F7F4E2;
-      color: #513628;
-      /*
-      you can use hover styles here even though this size
-      has the possibility of being a mobile device.
-      */ }
-      .nav li a:hover, .nav li a:focus {
-        color: #b17c61;
-        text-decoration: none;
-        border-bottom: 0px; }
-    .nav li ul.sub-menu,
-    .nav li ul.children {
-      margin-top: 0;
-      border: 1px solid #ccc;
-      border-top: 0;
-      position: absolute;
-      visibility: hidden;
-      z-index: 8999;
-      /* highlight sub-menu current page */ }
-      .nav li ul.sub-menu li,
-      .nav li ul.children li {
-        /*
-        if you need to go deeper, go nuts
-        just remember deeper menus suck
-        for usability. k, bai.
-        */ }
-        .nav li ul.sub-menu li a,
-        .nav li ul.children li a {
-          padding-left: 10px;
-          border-right: 0;
-          display: block;
-          width: 180px;
-          border-bottom: 1px solid #ccc; }
-        .nav li ul.sub-menu li:last-child a,
-        .nav li ul.children li:last-child a {
-          border-bottom: 0; }
-        .nav li ul.sub-menu li ul,
-        .nav li ul.children li ul {
-          top: 0;
-          left: 100%; }
-    .nav li:hover > ul {
-      top: auto;
-      visibility: visible; }
-
+  /* end current highlighters */
+}
+.nav ul {
+  background: #000;
+  margin-top: 0;
+}
+.nav li {
+  float: left;
+  position: relative;
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+.nav li a {
+  padding: 0 0.75em;
+  border-top: 0px solid #F7F4E2;
+  color: #513628;
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+.nav li a:hover, .nav li a:focus {
+  color: #b17c61;
+  text-decoration: none;
+  border-bottom: 0px;
+}
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+}
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+  if you need to go deeper, go nuts
+  just remember deeper menus suck
+  for usability. k, bai.
+  */
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+}
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+.nav li ul.sub-menu li ul,
+.nav li ul.children li ul {
+  top: 0;
+  left: 100%;
+}
+.nav li:hover > ul {
+  top: auto;
+  visibility: visible;
+}
 /* end .nav */
 /*********************
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
-  margin-top: 2.2em; }
+  margin-top: 2.2em;
+}
 
 .widgettitle {
   border-bottom: 0px solid #444;
-  margin-bottom: 0.75em; }
+  margin-bottom: 0.75em;
+}
 
 .widget {
   padding: 0 10px;
-  margin: 2.2em 0; }
-  .widget ul li {
-    margin-bottom: 0.75em;
-    /* deep nesting */ }
-    .widget ul li ul {
-      margin-top: 0.75em;
-      padding-left: 1em; }
+  margin: 2.2em 0;
+}
+.widget ul li {
+  margin-bottom: 0.75em;
+  /* deep nesting */
+}
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
 
 /* links widget */
 /* meta widget */
@@ -467,17 +517,20 @@ FOOTER STYLES
 *********************/
 #inner-footer .footer_info-block {
   width: 440px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 #inner-footer #logo {
   width: 100px;
-  margin-top: 0.5em; }
+  margin-top: 0.5em;
+}
 #inner-footer .footer_info {
   float: left;
   text-align: left;
   margin-left: 1em;
   padding-left: 1em;
   border-left: 1px solid #A3DED2;
-  margin-top: 2.5em; }
+  margin-top: 2.5em;
+}
 
 /*
 you'll probably need to do quite a bit
@@ -489,8 +542,8 @@ mobile. Make sure to double check these!
   be careful with the depth of your menus.
   it's very rare to have multi-depth menus in
   the footer.
-  */ }
-
+  */
+}
 /* end .footer-links */
 /******************************************************************
 Site Name:
@@ -503,7 +556,8 @@ be seen on the Desktop.
 
 ******************************************************************/
 .wrap {
-  width: 1040px; }
+  width: 1040px;
+}
 
 /*
 you can call the larger styles if you want, but there's really no need
