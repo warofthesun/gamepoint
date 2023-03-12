@@ -13,39 +13,72 @@
 @import "partials/mixins";
 @import "modules/buttons";
 
-.tribe-events-tooltip {
-    .entry-title {
-        color: $blue !important;
-    }
+.tooltipster-content {
+  .tribe-events-tooltip {
+      .entry-title {
+          color: $blue !important;
+      }
 
-    .event_subhead {
-        color: $brown;
-        font-size: 1.2em;
-        font-weight: normal;
-    }
-    
+      .event_subhead {
+          color: $brown;
+          font-size: 1.2em;
+          font-weight: normal;
+      }
 
-    .tribe-event-duration {
-        font-size: 1.3em;
-        font-weight: bold;
-        margin-bottom: 1em;
-    }
+      .tribe-event-duration {
+          font-size: 1.3em;
+          font-weight: bold;
+          margin-bottom: 1em;
+      }
 
-    .tribe-events-event-body {
-        font-size: 1em;
+      .tribe-events-event-body {
+          font-size: 1em;
+      }
+  }
+
+  .tribe-events-calendar-month__calendar-event-tooltip-title.tribe-common-h7 {
+    .tribe-events-calendar-month__calendar-event-tooltip-title-link.tribe-common-anchor-thin {
+      color: darken($blue, 20%) !important;
+      font-size: 1.4em;
+      font-weight: bold;
+      line-height: 1;
     }
+  }
 }
 
-.tribe-events-schedule {
-    color: $brown;
-    font-size: .7em;
-    font-style: italic;
-    margin:-1em 0 1.5em;
-    border-bottom: 0px solid $brown;
+.tribe-events .tribe-events-calendar-month__calendar-event-tooltip-datetime {
+  font-size: 1em;
+  font-weight: bold;
+}
 
-    h2 {
-        font-weight: 500;
+.tooltipster-base.tribe-events-tooltip-theme {
+  max-width: 350px;
+}
+
+.tribe-events .tribe-events-calendar-month__calendar-event-tooltip-featured-image-wrapper {
+  width: 100%;
+}
+
+.tribe-events-single {
+  .tribe-events-schedule {
+    margin:-1em 0 1.5em;
+      h2 {
+          font-weight: 500;
+          color: $brown;
+          font-size: 1em;
+          border-bottom: 0px solid $brown;
+      }
+  }
+
+  .tribe-events-back {
+    a {
+      color: $brown;
     }
+  }
+
+  .tribe-events-content {
+    color: $brown;
+  }
 }
 
 
@@ -53,10 +86,13 @@
     .tribe-events-single-event-title {
         color: $blue;
         font-size: 3em;
+        line-height: 1.1;
     }
     .tribe-events-event-meta {
         background: none;
         border: 0;
+        flex-direction: column;
+        width: 100% !important;
     }
 }
 .tribe-events-event-meta {
@@ -79,14 +115,26 @@
     .tribe-events-meta-group {
         width: 100% !important;
         background-color: $tan;
+        margin-bottom: 2em;
+        padding-top: 0;
 
         .tribe-events-single-section-title {
             font-size: 2em;
             color: $blue;
             text-transform: uppercase;
-            font-weight: 900;
+            font-weight: bold;
             text-align: center;
             border-bottom: 1px solid $brown;
+        }
+
+        .tribe-events-start-date-label, .tribe-events-start-time-label, .tribe-venue, .tribe-venue-tel-label, .tribe-events-event-cost-label, .tribe-events-event-categories-label {
+          font-weight: bold;
+        }
+
+        .tribe-venue-url a, .tribe-events-event-categories a, a.tribe-events-gmap {
+          color: $brown;
+          font-weight: normal;
+          text-decoration: underline;
         }
     }
 }
@@ -116,10 +164,28 @@
     color: $brown !important;
 }
 
-.tribe-events-calendar thead th {
+header.tribe-events-calendar-month__header {
+  padding: 0 !important;
+}
+
+.tribe-events-calendar thead th, .tribe-events-calendar-month__header-column, .tribe-events-calendar-month__header-row {
     background-color: $blue;
     border-left: 1px solid $blue;
     border-right: 1px solid $blue;
+    display: flex;
+    padding: 0 !important;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+    h3 {
+      font-weight: bold !important;
+      color: $white !important;
+    }
+}
+
+.tribe-events-calendar-month__day.tribe-events-calendar-month__day--past {
+  background-color: rgba($gray, .5);
 }
 
 #tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured {
@@ -140,4 +206,37 @@
     font-size: 1.1em;
     font-weight: normal;
     color: $brown;
+}
+
+.tribe-events-c-top-bar__datepicker-time {
+	h1, .h1 {
+		font-size: 1em;
+		line-height: 1.333em;
+		text-transform: uppercase;
+		color: $brown;
+		font-weight: bold;
+	}
+
+	h2, .h2 {
+		font-size: 1.75em;
+		line-height: 1.4em;
+		margin-bottom: 0.375em;
+		text-transform: uppercase;
+	}
+
+	h3, .h3 {
+		font-size: 1.125em;
+	}
+
+	h4, .h4 {
+		font-size: 1.1em;
+		font-weight: 700;
+	}
+
+	h5, .h5 {
+		font-size: 0.846em;
+		line-height: 2.09em;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
 }

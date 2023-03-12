@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
 /* ==========================================================================
    HTML5 display definitions
@@ -17,7 +18,8 @@ main,
 nav,
 section,
 summary {
-  display: block; }
+  display: block;
+}
 
 /**
  * Correct `inline-block` display not defined in IE 8/9.
@@ -25,7 +27,8 @@ summary {
 audio,
 canvas,
 video {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
@@ -33,7 +36,8 @@ video {
  */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  height: 0;
+}
 
 /**
  * Address `[hidden]` styling not present in IE 8/9.
@@ -41,7 +45,8 @@ audio:not([controls]) {
  */
 [hidden],
 template {
-  display: none; }
+  display: none;
+}
 
 /* ==========================================================================
    Base
@@ -52,18 +57,17 @@ template {
  *    user zoom.
  */
 html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
 
 /**
  * Remove default margin.
  */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 /* ==========================================================================
    Links
@@ -72,20 +76,23 @@ body {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background: transparent; }
+  background: transparent;
+}
 
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 a:focus {
-  outline: thin dotted; }
+  outline: thin dotted;
+}
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 a:active,
 a:hover {
-  outline: 0; }
+  outline: 0;
+}
 
 /* ==========================================================================
    Typography
@@ -96,14 +103,16 @@ a:hover {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+}
 
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
 abbr[title] {
   border-bottom: 0px dotted;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
@@ -111,7 +120,8 @@ abbr[title] {
 b,
 strong,
 .strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 /**
  * Address styling not present in Safari 5 and Chrome.
@@ -119,7 +129,8 @@ strong,
 dfn,
 em,
 .em {
-  font-style: italic; }
+  font-style: italic;
+}
 
 /**
  * Address differences between Firefox and other browsers.
@@ -127,7 +138,8 @@ em,
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  height: 0; }
+  height: 0;
+}
 
 /*
  * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
@@ -136,13 +148,15 @@ p {
   -webkit-hyphens: manual;
   -epub-hyphens: manual;
   -moz-hyphens: manual;
-  hyphens: manual; }
+  hyphens: manual;
+}
 
 /*
  * Addresses margins set differently in IE6/7.
  */
 pre {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
@@ -152,30 +166,35 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
 pre {
-  white-space: pre-wrap; }
+  white-space: pre-wrap;
+}
 
 /**
  * Set consistent quote types.
  */
 q {
-  quotes: "\201C" "\201D" "\2018" "\2019"; }
+  quotes: "“" "”" "‘" "’";
+}
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
 q:before,
 q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 small, .small {
-  font-size: 75%; }
+  font-size: 75%;
+}
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -185,13 +204,16 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 /* ==========================================================================
   Lists
@@ -203,21 +225,25 @@ dl,
 menu,
 ol,
 ul {
-  margin: 1em 0; }
+  margin: 1em 0;
+}
 
 dd {
-  margin: 0; }
+  margin: 0;
+}
 
 /*
  * Addresses paddings set differently in IE6/7.
  */
 menu {
-  padding: 0 0 0 40px; }
+  padding: 0 0 0 40px;
+}
 
 ol,
 ul {
   padding: 0;
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 /*
  * Corrects list images handled incorrectly in IE7.
@@ -225,7 +251,8 @@ ul {
 nav ul,
 nav ol {
   list-style: none;
-  list-style-image: none; }
+  list-style-image: none;
+}
 
 /* ==========================================================================
   Embedded content
@@ -234,13 +261,15 @@ nav ol {
  * Remove border when inside `a` element in IE 8/9.
  */
 img {
-  border: 0; }
+  border: 0;
+}
 
 /**
  * Correct overflow displayed oddly in IE 9.
  */
 svg:not(:root) {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* ==========================================================================
    Figures
@@ -249,7 +278,8 @@ svg:not(:root) {
  * Address margin not present in IE 8/9 and Safari 5.
  */
 figure {
-  margin: 0; }
+  margin: 0;
+}
 
 /* ==========================================================================
    Forms
@@ -260,17 +290,17 @@ figure {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.35em 0.625em 0.75em;
+}
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
 
 /**
  * 1. Correct font family not being inherited in all browsers.
@@ -281,12 +311,10 @@ button,
 input,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 2 */
-  margin: 0;
-  /* 3 */ }
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 2 */
+  margin: 0; /* 3 */
+}
 
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
@@ -294,7 +322,8 @@ textarea {
  */
 button,
 input {
-  line-height: normal; }
+  line-height: normal;
+}
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -304,7 +333,8 @@ input {
  */
 button,
 select {
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -314,52 +344,51 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */ }
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
 
 /**
  * Re-set default cursor for disabled elements.
  */
 button[disabled],
 html input[disabled] {
-  cursor: default; }
+  cursor: default;
+}
 
 /**
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
+input[type=search] {
+  -webkit-appearance: textfield; /* 1 */
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box; }
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
 
 /**
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 
 /**
  * Remove inner padding and border in Firefox 4+.
@@ -367,17 +396,17 @@ input[type="search"]::-webkit-search-decoration {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
 textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */ }
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+}
 
 /* ==========================================================================
    Tables
@@ -387,34 +416,41 @@ textarea {
  */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .image-replacement,
 .ir {
   text-indent: 100%;
   white-space: nowrap;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .clearfix, .cf {
-  zoom: 1; }
-  .clearfix:before, .clearfix:after, .cf:before, .cf:after {
-    content: "";
-    display: table; }
-  .clearfix:after, .cf:after {
-    clear: both; }
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after, .cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+.clearfix:after, .cf:after {
+  clear: both;
+}
 
 /*
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
 span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic; }
+  font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
+  font-style: italic;
+}
 
 /******************************************************************
 Site Name:
@@ -459,7 +495,8 @@ http://alistapart.com/column/responsive-typography-is-a-physical-discipline
   src: url("../fonts/gamepoint.eot");
   src: url("../fonts/gamepoint.eot?#iefix") format("embedded-opentype"), url("../fonts/gamepoint.woff") format("woff"), url("../fonts/gamepoint.ttf") format("truetype"), url("../fonts/gamepoint.svg#gamepoint") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 [data-icon]:before {
   font-family: "gamepoint" !important;
   content: attr(data-icon);
@@ -470,9 +507,10 @@ http://alistapart.com/column/responsive-typography-is-a-physical-discipline
   speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
-[class^="gp-"]:before,
+[class^=gp-]:before,
 [class*=" gp-"]:before {
   font-family: "gamepoint" !important;
   font-style: normal !important;
@@ -482,10 +520,12 @@ http://alistapart.com/column/responsive-typography-is-a-physical-discipline
   speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .gp-gamepoint-logo:before {
-  content: "\61"; }
+  content: "a";
+}
 
 /*********************
 FONT FACE (IN YOUR FACE)
@@ -537,7 +577,8 @@ p {
   -moz-font-feature-settings: "liga=1, dlig=1";
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig"; }
+  font-feature-settings: "liga", "dlig";
+}
 
 /******************************************************************
 Site Name:
@@ -653,14 +694,14 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.pink-btn, #tribe-events .tribe-events-button, .tribe-button, input[type="submit"] {
+.pink-btn, #tribe-events .tribe-events-button, .tribe-button, input[type=submit], .tribe-events .tribe-events-c-subscribe-dropdown__container .tribe-events-c-subscribe-dropdown .tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button {
   display: inline-block;
   position: relative;
   font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff !important;
   letter-spacing: 1px;
-  font-size: .9em;
+  font-size: 0.9em;
   line-height: 34px;
   font-weight: bold;
   padding: 0 24px;
@@ -670,119 +711,233 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   text-transform: uppercase;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out;
-  box-shadow: 1px 1px 5px #f1ecce; }
-  .pink-btn:hover, #tribe-events .tribe-events-button:hover, .tribe-button:hover, input[type="submit"]:hover, .pink-btn:focus, #tribe-events .tribe-events-button:focus, .tribe-button:focus, input[type="submit"]:focus {
-    color: #fff;
-    text-decoration: none;
-    outline: none;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
-    /* border-bottom: 0px !important; */ }
-  .pink-btn:active, #tribe-events .tribe-events-button:active, .tribe-button:active, input[type="submit"]:active {
-    top: 1px; }
+  box-shadow: 1px 1px 5px #f1ecce;
+}
+.pink-btn:hover, #tribe-events .tribe-events-button:hover, .tribe-button:hover, input[type=submit]:hover, .tribe-events .tribe-events-c-subscribe-dropdown__container .tribe-events-c-subscribe-dropdown .tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button:hover, .pink-btn:focus, #tribe-events .tribe-events-button:focus, .tribe-button:focus, input[type=submit]:focus, .tribe-events .tribe-events-c-subscribe-dropdown__container .tribe-events-c-subscribe-dropdown .tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
+  /* border-bottom: 0px !important; */
+}
+.pink-btn:active, #tribe-events .tribe-events-button:active, .tribe-button:active, input[type=submit]:active, .tribe-events .tribe-events-c-subscribe-dropdown__container .tribe-events-c-subscribe-dropdown .tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button:active {
+  top: 1px;
+}
 
 /*
 An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.pink-btn, #tribe-events .tribe-events-button, .tribe-button, input[type="submit"] {
+.pink-btn, #tribe-events .tribe-events-button, .tribe-button, input[type=submit], .tribe-events .tribe-events-c-subscribe-dropdown__container .tribe-events-c-subscribe-dropdown .tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button {
   background-color: #F7ACB8;
   text-shadow: 1px 1px 5px #f595a4;
-  margin-bottom: 1em; }
-  .pink-btn:hover, .pink-btn:focus, #tribe-events .tribe-events-button:hover, #tribe-events .tribe-events-button:focus, .tribe-button:hover, .tribe-button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
-    background-color: #f599a8; }
-  .pink-btn:active, #tribe-events .tribe-events-button:active, .tribe-button:active, input[type="submit"]:active {
-    background-color: #f490a0; }
+  margin-bottom: 1em;
+}
+.pink-btn:hover, .pink-btn:focus, #tribe-events .tribe-events-button:hover, #tribe-events .tribe-events-button:focus, .tribe-button:hover, .tribe-button:focus, input[type=submit]:hover, input[type=submit]:focus, .tribe-events .tribe-events-c-subscribe-dropdown__container .tribe-events-c-subscribe-dropdown .tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button:hover, .tribe-events .tribe-events-c-subscribe-dropdown__container .tribe-events-c-subscribe-dropdown .tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button:focus {
+  background-color: #f599a8;
+}
+.pink-btn:active, #tribe-events .tribe-events-button:active, .tribe-button:active, input[type=submit]:active, .tribe-events .tribe-events-c-subscribe-dropdown__container .tribe-events-c-subscribe-dropdown .tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button:active {
+  background-color: #f490a0;
+}
 
-.tribe-events-tooltip .entry-title {
-  color: #A3DED2 !important; }
-.tribe-events-tooltip .event_subhead {
+.tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button {
+  width: 220px;
+}
+
+.tooltipster-content .tribe-events-tooltip .entry-title {
+  color: #A3DED2 !important;
+}
+.tooltipster-content .tribe-events-tooltip .event_subhead {
   color: #513628;
   font-size: 1.2em;
-  font-weight: normal; }
-.tribe-events-tooltip .tribe-event-duration {
+  font-weight: normal;
+}
+.tooltipster-content .tribe-events-tooltip .tribe-event-duration {
   font-size: 1.3em;
   font-weight: bold;
-  margin-bottom: 1em; }
-.tribe-events-tooltip .tribe-events-event-body {
-  font-size: 1em; }
+  margin-bottom: 1em;
+}
+.tooltipster-content .tribe-events-tooltip .tribe-events-event-body {
+  font-size: 1em;
+}
+.tooltipster-content .tribe-events-calendar-month__calendar-event-tooltip-title.tribe-common-h7 .tribe-events-calendar-month__calendar-event-tooltip-title-link.tribe-common-anchor-thin {
+  color: #58c3ad !important;
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1;
+}
 
-.tribe-events-schedule {
-  color: #513628;
-  font-size: .7em;
-  font-style: italic;
+.tribe-events .tribe-events-calendar-month__calendar-event-tooltip-datetime {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.tooltipster-base.tribe-events-tooltip-theme {
+  max-width: 350px;
+}
+
+.tribe-events .tribe-events-calendar-month__calendar-event-tooltip-featured-image-wrapper {
+  width: 100%;
+}
+
+.tribe-events-single .tribe-events-schedule {
   margin: -1em 0 1.5em;
-  border-bottom: 0px solid #513628; }
-  .tribe-events-schedule h2 {
-    font-weight: 500; }
+}
+.tribe-events-single .tribe-events-schedule h2 {
+  font-weight: 500;
+  color: #513628;
+  font-size: 1em;
+  border-bottom: 0px solid #513628;
+}
+.tribe-events-single .tribe-events-back a {
+  color: #513628;
+}
+.tribe-events-single .tribe-events-content {
+  color: #513628;
+}
 
 .single-tribe_events .tribe-events-single-event-title {
   color: #A3DED2;
-  font-size: 3em; }
+  font-size: 3em;
+  line-height: 1.1;
+}
 .single-tribe_events .tribe-events-event-meta {
   background: none;
-  border: 0; }
+  border: 0;
+  flex-direction: column;
+  width: 100% !important;
+}
 
 .tribe-events-event-meta dl {
-  text-align: center; }
+  text-align: center;
+}
 .tribe-events-event-meta dt {
   font-size: 1.5em;
   color: #513628;
-  margin-bottom: .3em; }
+  margin-bottom: 0.3em;
+}
 .tribe-events-event-meta dd {
   font-size: 1.5em !important;
   border-bottom: 0 !important;
   margin-bottom: 1em !important;
-  color: #513628 !important; }
+  color: #513628 !important;
+}
 .tribe-events-event-meta .tribe-events-meta-group {
   width: 100% !important;
-  background-color: #F7F4E2; }
-  .tribe-events-event-meta .tribe-events-meta-group .tribe-events-single-section-title {
-    font-size: 2em;
-    color: #A3DED2;
-    text-transform: uppercase;
-    font-weight: 900;
-    text-align: center;
-    border-bottom: 1px solid #513628; }
+  background-color: #F7F4E2;
+  margin-bottom: 2em;
+  padding-top: 0;
+}
+.tribe-events-event-meta .tribe-events-meta-group .tribe-events-single-section-title {
+  font-size: 2em;
+  color: #A3DED2;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #513628;
+}
+.tribe-events-event-meta .tribe-events-meta-group .tribe-events-start-date-label, .tribe-events-event-meta .tribe-events-meta-group .tribe-events-start-time-label, .tribe-events-event-meta .tribe-events-meta-group .tribe-venue, .tribe-events-event-meta .tribe-events-meta-group .tribe-venue-tel-label, .tribe-events-event-meta .tribe-events-meta-group .tribe-events-event-cost-label, .tribe-events-event-meta .tribe-events-meta-group .tribe-events-event-categories-label {
+  font-weight: bold;
+}
+.tribe-events-event-meta .tribe-events-meta-group .tribe-venue-url a, .tribe-events-event-meta .tribe-events-meta-group .tribe-events-event-categories a, .tribe-events-event-meta .tribe-events-meta-group a.tribe-events-gmap {
+  color: #513628;
+  font-weight: normal;
+  text-decoration: underline;
+}
 
 .tribe-events-tickets-rsvp, .tribe-events-tickets {
-  background: #F7F4E2 !important; }
-  .tribe-events-tickets-rsvp .entry-content table, .tribe-events-tickets .entry-content table {
-    border: 0px; }
+  background: #F7F4E2 !important;
+}
+.tribe-events-tickets-rsvp .entry-content table, .tribe-events-tickets .entry-content table {
+  border: 0px;
+}
 
 .tribe-list-widget {
   background-color: white;
   margin-top: 0;
   padding-top: 1em;
   padding-bottom: 1em;
-  box-shadow: 1px 1px 5px #f1ecce; }
+  box-shadow: 1px 1px 5px #f1ecce;
+}
 
 #tribe-bar-form .tribe-bar-filters {
-  display: none !important; }
+  display: none !important;
+}
 
 .tribe-events-page-title {
-  color: #513628 !important; }
+  color: #513628 !important;
+}
 
-.tribe-events-calendar thead th {
+header.tribe-events-calendar-month__header {
+  padding: 0 !important;
+}
+
+.tribe-events-calendar thead th, .tribe-events-calendar-month__header-column, .tribe-events-calendar-month__header-row {
   background-color: #A3DED2;
   border-left: 1px solid #A3DED2;
-  border-right: 1px solid #A3DED2; }
+  border-right: 1px solid #A3DED2;
+  display: flex;
+  padding: 0 !important;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+.tribe-events-calendar thead th h3, .tribe-events-calendar-month__header-column h3, .tribe-events-calendar-month__header-row h3 {
+  font-weight: bold !important;
+  color: #fff !important;
+}
+
+.tribe-events-calendar-month__day.tribe-events-calendar-month__day--past {
+  background-color: rgba(234, 237, 242, 0.5);
+}
 
 #tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured {
-  background: #513628; }
+  background: #513628;
+}
 
 .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] {
-  background-color: #A3DED2; }
+  background-color: #A3DED2;
+}
 
 .event_subhead {
   font-size: 1.5em;
   font-weight: 700;
-  color: #A3DED2; }
+  color: #A3DED2;
+}
 
 .event_excerpt {
   font-size: 1.1em;
   font-weight: normal;
-  color: #513628; }
+  color: #513628;
+}
+
+.tribe-events-c-top-bar__datepicker-time h1, .tribe-events-c-top-bar__datepicker-time .h1 {
+  font-size: 1em;
+  line-height: 1.333em;
+  text-transform: uppercase;
+  color: #513628;
+  font-weight: bold;
+}
+.tribe-events-c-top-bar__datepicker-time h2, .tribe-events-c-top-bar__datepicker-time .h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+  text-transform: uppercase;
+}
+.tribe-events-c-top-bar__datepicker-time h3, .tribe-events-c-top-bar__datepicker-time .h3 {
+  font-size: 1.125em;
+}
+.tribe-events-c-top-bar__datepicker-time h4, .tribe-events-c-top-bar__datepicker-time .h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+.tribe-events-c-top-bar__datepicker-time h5, .tribe-events-c-top-bar__datepicker-time .h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
 /*# sourceMappingURL=tribe-events.css.map */
